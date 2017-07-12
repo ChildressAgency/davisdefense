@@ -5,8 +5,17 @@
   Version: 1.0
 */
 
+a{
+  color:#123d61;
+}
+a:hover{
+  color:#822222;
+  text-decoration:underline;
+}
+
 nav{
   z-index:999;
+  background-color:#fff;
 }
 .navbar-nav>li>a{
   font-family:"Chathura", sans-serif;
@@ -244,7 +253,7 @@ nav .apply-now{
   background-image:url(images/testimonials-section-image.png);
   background-repeat:no-repeat;
   background-size:cover;
-  background-position:right top;
+  background-position:50% 0%;
 }
 
 .teaming-vehicles{
@@ -368,16 +377,196 @@ nav .apply-now{
   font-family:Chathura, sans-serif;
   font-size:28px;
 }
+.follow-us{
+  position:absolute;
+  bottom:80px;
+  width:100%;
+  text-align:center;
+  background-color:rgba(255,255,255,.8);
+  box-shadow:0px 0px 20px #333;
+  padding-top:15px;
+  padding-bottom:15px;
+}
+.follow-us h2{
+  margin-top:0;
+  margin-bottom:0;
+  font-family:"Roboto Condensed", sans-serif;
+  color:#822222;
+}
+.follow-us-social>a{
+  font-size:40px;
+  color:#123d61;
+}
+.follow-us-social>a:hover{
+  color:#822222;
+}
+#section4 .btn-inline{
+  margin-bottom:40px;
+}
+
+.section5-img{
+  min-height:340px;
+  background-image:url(images/contact-background.png);
+  width:100%;
+  position:absolute;
+  bottom:80px;
+  background-repeat:no-repeat;
+}
+.contact-info{
+  padding-top:20px;
+}
+.contact-info h4{
+  font-family:"Roboto Condensed", sans-serif;
+  text-transform:uppercase;
+  color:#822222;
+  margin-bottom:5px;
+}
+.contact-info p{
+  font-family:Chathura, sans-serif;
+  font-size:24px;
+  line-height:.8em;
+  color:#123d61;
+  margin-bottom:20px;
+  text-transform:uppercase;
+  font-weight:800;
+}
+.footer-contact-form{
+  padding-top:25px;
+}
+.footer-contact-form .form-control{
+  border-color:#822222;
+  border-radius:16px;
+  color:#822222;
+  font-family:"Roboto Condensed", sans-serif;
+}
+.footer-contact-form .form-control::-webkit-input-placeholder{
+  color:#822222;
+}
+.footer-contact-form .form-control:-moz-placeholder{
+  color:#822222;
+}
+.footer-contact-form .form-control::-moz-placeholder{
+  color:#822222;
+}
+.footer-contact-form .form-control:-ms-input-placeholder{
+  color:#822222;
+}
+.footer-contact-form .btn-main{
+  color:#123d61;
+  border-radius:6px;
+  border-color:#123d61;
+  float:right;
+}
+.footer-contact-form .btn-main:hover{
+  color:#fff;
+  background-color:#123d61;
+}
+
+#section5.section{
+  margin-bottom:0 !important;
+}
+#section6.section{
+  margin-top:-60px;
+}
+.footer .login-section{
+  background-color:#123d61;
+  color:#fff;
+  text-align:center;
+  padding-top:25px;
+  padding-bottom:25px;
+}
+.footer-login-form{
+  max-width:700px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.footer-login-form h2{
+  margin-top:0;
+  margin-bottom:0;
+  text-transform:uppercase;
+  font-family:"Roboto Condensed", sans-serif;
+  margin-bottom:20px;
+}
+.footer-login-form .form-control{
+  border-color:#fff;
+  background-color:#123d61;
+  border-radius:16px;
+  color:#fff;
+  font-family:"Roboto Condensed", sans-serif;
+}
+.footer-login-form .control-label{
+  display:block;
+  text-align:left;
+  font-family:Chathura, sans-serif;
+  line-height:.8em;
+  font-size:28px;
+  font-weight:800;
+}
+.footer-login-form .btn-main{
+  color:#fff;
+  border-color:#fff;
+  float:right;
+}
+.footer-login-form a.control-label{
+  color:#fff;
+}
+.footer-login-form a.control-label:hover{
+  color:#fff;
+  text-decoration:underline;
+}
+.footer-nav{
+  padding-top:15px;
+  padding-bottom:15px;
+}
+.footer-nav ul{
+  margin-top:-35px;
+  text-align:center;
+}
+.footer-social>a{
+  color:#123d61;
+  font-size:26px;
+}
+.footer-social>a:hover{
+  color:#822222;
+}
+.footer-nav>ul>li>a{
+  font-family:Chathura, sans-serif;
+  font-size:28px;
+  font-weight:800;
+  text-transform:uppercase;
+  color:#123d61;
+}
+.footer-nav>ul>li>a:hover{
+  color:#822222;
+}
+.footer-nav .copyright{
+  text-align:center;
+  color:#822222;
+  font-family:"Roboto Condensed", sans-serif;
+  margin-bottom:0;
+}
+.footer-nav .copyright+.copyright{
+  margin-bottom:25px;
+}
 
 
 @media (max-width:767px){
   .section1-img,
   .section2-img,
-  .section3-img{
+  .section3-img,
+  .section5-img{
     position:relative;
+    bottom:0;
   }
   .company-awards-bg{
     min-height:500px;
+  }
+  .follow-us{
+    position:relative;
+    bottom:0;
+  }
+  .teaming-vehicles{
+    bottom:0;
   }
 }
 @media (min-width:768px){
@@ -409,12 +598,16 @@ nav .apply-now{
   .section1-img,
   .section2-img,
   .teaming-vehicles,
-  .section3-img{
+  .section3-img,
+  .section5-img{
     bottom:130px;
   }
   .section1-img{
     min-height:40%;
     bottom:0;
+  }
+  .follow-us{
+    bottom:130px;
   }
 }
 @media (min-width:992px){
@@ -422,6 +615,6 @@ nav .apply-now{
     height:40px;
   }
   .section{
-    margin-bottom:60px;
+    /*margin-bottom:60px;*/
   }
 }
