@@ -65,8 +65,23 @@ nav .apply-now{
   background-color:#123d61;
 }
 
-.section{
-  margin-bottom:50px;
+.btn-main{
+  display:inline-block;
+  color:#822222;
+  text-transform:uppercase;
+  font-size:14px;
+  font-family:"Roboto Condensed", sans-serif;
+  border:1px solid #822222;
+  border-radius:16px;
+  padding:3px 15px 0px;
+  background-color:transparent;
+  -webkit-transition:background-color .3s ease;
+  transition:background-color .3s ease;
+}
+.btn-main:hover{
+  text-decoration:none;
+  color:#fff;
+  background-color:#822222;
 }
 
 .company-awards-bg{
@@ -127,6 +142,12 @@ nav .apply-now{
   font-weight:800;
   line-height:.8em;
   text-transform:uppercase;
+}
+
+.keep-on-top{
+  background-color:rgba(255,255,255,.8);
+  position:relative;
+  z-index:9;
 }
 
 .section h1{
@@ -192,14 +213,167 @@ nav .apply-now{
   background-image:url(images/frogman.png);
   background-repeat:no-repeat;
   background-position:70% 0%;
+  background-size:cover;
   position:absolute;
-  bottom:0;
+  bottom:80px;
   width:100%;
+}
+
+.client-logos ul{
+  -webkit-animation-delay:.5s;
+  animation-delay:.5s;
+  text-align:center;
+  margin-top:40px;  
+}
+
+.section2-img{
+  min-height:600px;
+  position:absolute;
+  bottom:80px;
+  width:100%;
+  background-image:url(images/climbing-wall.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:50% 0%;
+}
+.section3-img{
+  min-height:600px;
+  position:absolute;
+  bottom:80px;
+  width:100%;
+  background-image:url(images/testimonials-section-image.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:right top;
+}
+
+.teaming-vehicles{
+  position:absolute;
+  bottom:80px;
+  width:100%;
+  background-color:rgba(255,255,255,.8);
+  z-index:9;
+  padding-top:20px;
+  padding-bottom:20px;
+  box-shadow:0px 0px 20px #333;
+  -webkit-animation-delay:.5s;
+  animation-delay:.5s;  
+}
+.teaming-vehicles .row{
+  max-width:550px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+  -webkit-animation-delay:1s;
+  animation-delay:1s;
+}
+.teaming-vehicles h3{
+  font-family:"Roboto Condensed", sans-serif;
+  font-size:36px;
+  text-transform:uppercase;
+  color:#822222;
+  margin-top:0;
+  margin-bottom:0;
+}
+.teaming-vehicles .btn-main{
+  margin-top:15px;
+}
+#section3 h1{
+  text-align:right;
+}
+#testimonialSlider{
+  text-align:right;
+  max-width:700px;
+  margin-top:40px;
+  margin-left:auto;
+  margin-right:0;
+}
+#testimonialSlider .testimonial{
+  font-family:Chathura, sans-serif;
+  font-size:36px;
+  line-height:.8em;
+  color:#123d61;
+  font-weight:800;
+}
+#testimonialSlide .testimonial-author{
+  font-family:Chathura, sans-serif;
+  font-size:26px;
+  line-height:.8em;
+  color:#822222;
+}
+
+#section4{
+  background-image:url(images/stay-updated.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:30% 0%;
+}
+#section4 h1{
+  text-align:left;
+}
+.blog-post-summary{
+  margin-bottom:25px;
+  -webkit-animation-delay:.5s;
+  animation-delay:.5s;  
+}
+.blog-post-summary+.blog-post-summary{
+  -webkit-animation-delay:1s;
+  animation-delay:1s;
+}
+.blog-post-summary .media{
+  overflow:visible;
+}
+.blog-post-summary .media-left>p{
+  font-family:Chathura, sans-serif;
+  font-size:40px;
+  font-weight:800;
+  text-transform:uppercase;
+  text-align:center;
+  line-height:.6em;
+  color:#fff;
+  background-color:rgba(130,34,34,.7);
+  padding:10px 15px;
+}
+.blog-post-summary .media-body{
+  background-color:rgba(18,61,97,.6);
+  color:#fff;
+  padding:10px 15px;
+  max-width:550px;
+  box-shadow:5px 5px 18px #444;
+}
+.blog-post-summary .media-body>.media-header{
+  margin-top:0;
+  margin-bottom:0;
+  font-family:Chathura, sans-serif;
+  font-size:40px;
+  line-height:.6em;
+  text-transform:uppercase;
+  font-weight:800;
+}
+.blog-post-summary .media-body>.media-header>small{
+  color:#123d61;
+  font-weight:800;
+  display:block;
+  font-size:65%;
+}
+.blog-post-summary .media-body>p{
+  font-family:Chathura, sans-serif;
+  font-size:28px;
+  line-height:.8em;
+  font-weight:800;
+}
+.blog-post-summary .media-body .read-more{
+  float:right;
+  color:#fff;
+  font-family:Chathura, sans-serif;
+  font-size:28px;
 }
 
 
 @media (max-width:767px){
-  .section1-img{
+  .section1-img,
+  .section2-img,
+  .section3-img{
     position:relative;
   }
   .company-awards-bg{
@@ -232,12 +406,22 @@ nav .apply-now{
   .section{
     margin-bottom:90px;
   }
+  .section1-img,
+  .section2-img,
+  .teaming-vehicles,
+  .section3-img{
+    bottom:130px;
+  }
   .section1-img{
     min-height:40%;
+    bottom:0;
   }
 }
 @media (min-width:992px){
   nav{
-    height:50px;
+    height:40px;
+  }
+  .section{
+    margin-bottom:60px;
   }
 }
