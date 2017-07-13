@@ -421,6 +421,7 @@ h1{
 .contact-info h3{
   text-transform:uppercase;
   margin-bottom:5px;
+  margin-top:0;
 }
 .contact-info p{
   margin-bottom:20px;
@@ -581,6 +582,24 @@ article.single-col h2,
   background-size:cover;
   background-position:53% 0%;
 }
+#education-img{
+  min-height:400px;
+  background-image:url(images/education-background.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center top;
+}
+#researchDevelopment{
+  background-image:url(images/research-background2.png);
+  background-repeat:no-repeat;
+  background-position:50% 0%;
+}
+#contact-img{
+  min-height:340px;
+  background-image:url(images/contact-background.png);
+  background-repeat:no-repeat;
+  background-position:left bottom;
+}
 
 
 @media (max-width:767px){
@@ -600,6 +619,10 @@ article.single-col h2,
   }
   .teaming-vehicles{
     bottom:0;
+  }
+  article.single-col ul,
+  .logistic-content ul{
+    padding-left:10px;
   }
 }
 @media (min-width:768px){
@@ -631,7 +654,8 @@ article.single-col h2,
     background-repeat:no-repeat;
     background-position:28% 100%;
   }
-  #cyber .single-col{
+  #cyber .single-col,
+  #researchDevelopment .single-col{
     background-color:rgba(255,255,255,.8);
     padding:15px;
   }
@@ -660,6 +684,9 @@ article.single-col h2,
   .follow-us{
     bottom:130px;
   }
+  #contact-img{
+    margin-top:-100px;
+  }
 }
 @media (min-width:992px){
   nav{
@@ -668,9 +695,15 @@ article.single-col h2,
   .section{
     /*margin-bottom:60px;*/
   }
+  #contact-img{
+    margin-top:-150px;
+  }
 }
 @media (min-width:1200px){
   #cyber{
     background-position:left bottom;
+  }
+  #researchDevelopment{
+    background-position:right top;
   }
 }
