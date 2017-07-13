@@ -45,6 +45,34 @@ a:hover{
   text-decoration:underline;
 }
 
+img.aligncenter{
+  display:block;
+  max-width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:25px;
+  margin-bottom:25px;
+  height:auto;
+}
+img.alignright{
+  display:block;
+  float:right;
+  max-width:100%;
+  height:auto;
+  margin-top:25px;
+  margin-left:25px;
+  margin-bottom:25px;
+}
+img.alignleft{
+  display:block;
+  float:left;
+  max-width:100%;
+  height:auto;
+  margin-top:25px;
+  margin-right:25px;
+  margin-bottom:25px;
+}
+
 nav{
   z-index:999;
   background-color:#fff;
@@ -600,6 +628,36 @@ article.single-col h2,
   background-repeat:no-repeat;
   background-position:left bottom;
 }
+
+#meetTheTeam{
+  margin-top:100px;
+  margin-bottom:100px;
+}
+.team-members{
+  max-width:450px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.team-member{
+  display:block;
+  text-align:center;
+}
+.team-member h2{
+  text-transform:uppercase;
+}
+.team-member h2>small{
+  display:block;
+  color:#123d61;
+}
+.team-members .modal-title{
+  font-size:22px;
+  text-transform:uppercase;
+}
+.team-members .modal-title>small{
+  color:#123d61;
+  display:block;
+}
+
 
 
 @media (max-width:767px){
