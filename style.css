@@ -5,6 +5,13 @@
   Version: 1.0
 */
 
+body{
+  font-family:Chathura, sans-serif;
+  font-size:28px;
+  font-weight:800;
+  line-height:.7em;
+  color:#123d61;
+}
 a{
   color:#123d61;
 }
@@ -211,7 +218,7 @@ nav .apply-now{
 }
 .cap-link p{
   font-size:26px;
-  line-height:.8em;
+  line-height:.7em;
   font-family:Chathura, sans-serif;
   color:#123d61;
   font-weight:800;
@@ -547,6 +554,10 @@ nav .apply-now{
 }
 .footer-nav .copyright+.copyright{
   margin-bottom:25px;
+}
+
+article.single-col ul{
+  column-count:2;
 }
 
 
