@@ -1,0 +1,22 @@
+    @font-face{
+        font-family:"Depot New W00_n4";
+        src:url("Fonts/90317400-196a-457e-8327-0d38d3f9a74b.eot?#iefix") format("eot")
+    }
+    @font-face{
+        font-family:"Depot New W00";
+        src:url("Fonts/90317400-196a-457e-8327-0d38d3f9a74b.eot?#iefix");
+        src:url("Fonts/90317400-196a-457e-8327-0d38d3f9a74b.eot?#iefix") format("eot"),url("Fonts/23be2605-8dcf-4813-8dee-fd0f54375abb.woff2") format("woff2"),url("Fonts/e5ab2c67-6aad-49d8-bbc6-597b7d5c2a8e.woff") format("woff"),url("Fonts/a61041f9-cc9f-41b7-87f7-a3235a01efe8.ttf") format("truetype"),url("Fonts/ebf3de66-bbbf-42a5-9bb0-c5e71ac310da.svg#ebf3de66-bbbf-42a5-9bb0-c5e71ac310da") format("svg");
+font-weight: 400;
+font-style: normal;
+    }
+    @font-face{
+        font-family:"Droid Serif W01_n4";
+        src:url("Fonts/de5702ce-174b-4ee6-a608-6482d5d7eb71.eot?#iefix") format("eot")
+    }
+    @font-face{
+        font-family:"Droid Serif W01";
+        src:url("Fonts/de5702ce-174b-4ee6-a608-6482d5d7eb71.eot?#iefix");
+        src:url("Fonts/de5702ce-174b-4ee6-a608-6482d5d7eb71.eot?#iefix") format("eot"),url("Fonts/b3682a03-bb70-4128-9e3f-47c8254e046c.woff2") format("woff2"),url("Fonts/83ae2051-dcdd-4931-9946-8be747a40d00.woff") format("woff"),url("Fonts/63f35b58-a40f-4f53-bb3e-20396f202214.ttf") format("truetype"),url("Fonts/19db6ebc-2d1b-4835-9588-3fa45ff36f4e.svg#19db6ebc-2d1b-4835-9588-3fa45ff36f4e") format("svg");
+font-weight: 400;
+font-style: normal;
+    }
