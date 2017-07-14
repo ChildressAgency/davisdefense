@@ -5,8 +5,6 @@ jQuery(document).ready(function($){
 			responsiveWidth:768,
       responsiveHeight:600,
       slideSelector:'.fullpage-slide',
-      //paddingTop:'50px',
-      //paddingBottom:'50px',
       verticalCentered: false,
       'onLeave': function(index, nextIndex, direction){
         $('.cap-link>span').addClass('animated bounce');
