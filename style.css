@@ -602,7 +602,8 @@ article.single-col ul{
   list-style:none;
 }
 article.single-col h2,
-.logistic-content h2{
+.logistic-content h2,
+#contracts h2{
   text-transform:uppercase;
   font-size:24px;
 }
@@ -808,11 +809,54 @@ article.single-col h2,
   text-decoration:none;
 }
 
+#contracts-img{
+  min-height:390px;
+  background-image:url(images/contracts-background.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center top;
+  box-shadow:inset 0px -22px 20px -18px #000;
+}
+
+#awardedTaskOrders ul{
+  column-count:4;
+  max-width:830px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:40px;
+}
+#awardedTaskOrders ul>li{
+  margin-bottom:10px;
+}
+#teammates{
+  margin-top:60px;
+  margin-bottom:60px;
+}
+#teammates ul{
+  max-width:550px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:justify;
+}
+#teammates ul>li{
+  margin-top:25px;
+}
+
 
 @media (max-width:400px){
   .emp-links-block{
     margin-left:auto;
     margin-right:auto;
+  }
+}
+@media (max-width:449px){
+  #awardedTaskOrders ul{
+    column-count:1;
+  }
+}
+@media (min-width:450px) and (max-width:767px){
+  #awardedTaskOrders ul{
+    column-count:2;
   }
 }
 @media (max-width:767px){
@@ -895,6 +939,11 @@ article.single-col h2,
     padding-left:5%;
     padding-right:5%;
   }
+  #contracts .row{
+    max-width:650px;
+    margin-left:auto;
+    margin-right:auto;
+  }
 }
 @media (min-width:768px) and (max-width:991px){
   nav{
@@ -919,6 +968,9 @@ article.single-col h2,
   }
   #contact-img{
     margin-top:-100px;
+  }
+  #awardedTaskOrders ul{
+    column-count:3;
   }
 }
 @media (min-width:992px){
