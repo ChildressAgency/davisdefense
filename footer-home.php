@@ -41,7 +41,7 @@
               <li><a href="#">Contact Us</a></li>
             </ul>
             <div class="clearfix"></div>
-            <p class="copyright">&copy;2017 Davis Defense Group</p>
+            <p class="copyright">&copy;2017 Davis Defense Group - test update</p>
             <p class="copyright">website created by <a href="https://childressagency.com">The Childress Agency</a></p>
           </div>
         </div>
