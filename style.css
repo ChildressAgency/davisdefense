@@ -169,6 +169,9 @@ nav .apply-now{
 .company-awards ul{
   margin-bottom:0;
 }
+.company-awards ul>li img{
+  max-height:120px;
+}
 .quick-links .media{
   margin-top:15px;
   color:#123d61;

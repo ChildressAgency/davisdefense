@@ -1,106 +1,109 @@
 <?php get_header(); ?>
 <main id="hp-main">
   <section class="section fp-auto-height-responsive" id="section0">
-    <img src="images/logo.png" class="img-responsive center-block animated slideInDown" alt="Davis Defense Logo" style="margin-top:40px;" />
-    <!--<div class="bottom-frame animated slideInUp">-->
-    <div class="company-awards-bg" style="background-image:url(images/home-header-image.png);">
-      <div class="company-awards">
-        <div class="container">
-          <ul class="list-unstyled list-inline animated bounce">
-            <li><img src="images/inc-500-1.png" class="img-responsive" alt="Inc 500 Logo" /></li>
-            <li><img src="images/fast-50-1.png" class="img-responsive" alt="Washington Technology Fast 50 Logo" /></li>
-            <li><img src="images/star-award-1.png" class="img-responsive" alt="Virginia's Fantastic 50 Star Award Logo" /></li>
-          </ul>
+    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" class="img-responsive center-block animated slideInDown" alt="Davis Defense Logo" style="margin-top:40px;" />
+    <div class="company-awards-bg" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/images/home-header-image.png);">
+      <?php if(have_rows('company_recognitions')): ?>
+        <div class="company-awards">
+          <div class="container">
+            <ul class="list-unstyled list-inline animated bounce">
+              <?php while(have_rows('company_recognitions')): the_row(); ?>
+                <li><img src="<?php the_sub_field('recognition_image'); ?>" class="img-responsive" alt="<?php the_sub_field('recognition_title'); ?>" /></li>
+            </ul>
+          </div>
         </div>
-      </div>
+      <?php endif; ?>
     </div>
-      <div class="quick-links">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4">
-              <a class="media">
-                <div class="media-left media-middle">
-                  <span href="#" class="services-icon"></span>
-                </div>
-                <div class="media-body">
-                  <h3 class="media-heading">Services</h3>
-                  <p>We provide expert program support services - From acquisition analysis, to logistics, test and engineering, and business analysis.</p>
-                </div>
-              </a>
-            </div>
-            <div class="col-sm-4">
-              <a class="media">
-                <div class="media-left media-middle">
-                  <span href="#" class="contracts-icon"></span>
-                </div>
-                <div class="media-body">
-                  <h3 class="media-heading">Contracts</h3>
-                  <p>Davis defense is a premier education provider, supporting the United States Military Since 2002.</p>
-                </div>
-              </a>
-            </div>
-            <div class="col-sm-4">
-              <a class="media">
-                <div class="media-left media-middle">
-                  <span href="#" class="training-icon"></span>
-                </div>
-                <div class="media-body">
-                  <h3 class="media-heading">Training</h3>
-                  <p>There are many ways to contract with davis defense group, including via gsa schedules and seaport-e.</p>
-                </div>
-              </a>
-            </div>
+    <div class="quick-links">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <a class="media">
+              <div class="media-left media-middle">
+                <span href="<?php the_field('services_icon_link'); ?>" class="services-icon"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading">Services</h3>
+                <p><?php the_field('services_icon_text'); ?></p>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-4">
+            <a class="media">
+              <div class="media-left media-middle">
+                <span href="<?php the_field('contracts_icon_link'); ?>" class="contracts-icon"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading">Contracts</h3>
+                <p><?php the_field('contracts_icon_text'); ?></p>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-4">
+            <a class="media">
+              <div class="media-left media-middle">
+                <span href="<?php the_field('training_icon_link'); ?>" class="training-icon"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading">Training</h3>
+                <p><?php the_field('training_icon_text'); ?></p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
-    <!--</div>-->
+    </div>
   </section>
   <section class="section fp-auto-height-responsive" id="section1">
     <div class="caps-icons keep-on-top">
       <div class="container">
         <h1>Capabilities</h1>
+        <?php 
+          $caps_page = get_page_by_path('capabilities');
+          $caps_page_id = $caps_page->ID; 
+        ?>
         <div class="row">
           <div class="col-sm-4 col-md-2">
-            <a href="#" class="cap-link">
+            <a href="<?php echo home_url('capabilities/#businessAnalytics'); ?>" class="cap-link">
               <span class="business-icon"></span>
               <h2>Business Analytics</h2>
-              <p>We provide a forward-leaning approach to data analysis that keeps our customers' financial and strategic objectives aligned with their missions.</p>
+              <p><?php the_field('business_analytics_icon_summary', $caps_page_id); ?></p>
             </a>
           </div>
           <div class="col-sm-4 col-md-2">
-            <a href="#" class="cap-link">
+            <a href="<?php echo home_url('capabilities/#logistics'); ?>" class="cap-link">
               <span class="logistics-icon"></span>
               <h2>Logistics</h2>
-              <p>Our acquisition logistics programs provide highly professional support for logistics documentation, training, risk management, equipment specialization, field maintenance, and tracking system analysis.</p>
+              <p><?php the_field('logistics_icon_summary', $caps_page_id); ?></p>
             </a>
           </div>
           <div class="col-sm-4 col-md-2">
-            <a href="#" class="cap-link">
+            <a href="<?php echo home_url('capabilities/#engineering'); ?>" class="cap-link">
               <span class="engineering-icon"></span>
               <h2>Engineering</h2>
-              <p>We provide the full spectrum of engineering and test support the entire acquisition lifecycle on myraid systems, from ground vehicles to C4ISR.</p>
+              <p><?php the_field('engineering_icon_summary', $caps_page_id); ?></p>
             </a>
           </div>
           <div class="clearfix visible-sm-block"></div>
           <div class="col-sm-4 col-md-2">
-            <a href="#" class="cap-link">
+            <a href="<?php echo home_url('capabilities/#cyber'); ?>" class="cap-link">
               <span class="cyber-icon"></span>
               <h2>Cyber</h2>
-              <p>We provide the analysis and administration of your IT systems with a focus on mission advancement and system security.</p>
+              <p><?php the_field('cyber_icon_summary', $caps_page_id); ?></p>
             </a>
           </div>
           <div class="col-sm-4 col-md-2">
-            <a href="#" class="cap-link">
+            <a href="<?php echo home_url('capabilities/#education'); ?>" class="cap-link">
               <span class="education-icon"></span>
               <h2>Education</h2>
-              <p>Our worldwide support of military education and training programs sets the standard in the management and execution of distance learning programs.</p>
+              <p><?php the_field('education_icon_summary', $caps_page_id); ?></p>
             </a>
           </div>
           <div class="col-sm-4 col-md-2">
-            <a href="#" class="cap-link">
+            <a href="<?php echo home_url('capabilities/#researchDevelopment'); ?>" class="cap-link">
               <span class="research-icon"></span>
               <h2>Research &amp; Development</h2>
-              <p>Rapid prototyping and systems integration efforts that are tangible, worthwhile, and cost-effective solutions.</p>
+              <p><?php the_field('research_development_icon_summary', $caps_page_id); ?></p>
             </a>
           </div>
         </div>
@@ -113,11 +116,9 @@
       <h1>Clients</h1>
       <div class="container">
         <ul class="list-unstyled list-inline">
-          <li><img src="images/marines-logo.png" class="img-responsive center-block" alt="Marines Logo" /></li>
-          <li><img src="images/army-logo.png" class="img-responsive center-block" alt="Army Logo" /></li>
-          <li><img src="images/homeland-security-logo.png" class="img-responsive center-block" alt="Homeland Security Logo" /></li>
-          <li><img src="images/navy-logo.png" class="img-responsive center-block" alt="Navy Logo" /></li>
-          <li><img src="images/air-force-logo.png" class="img-responsive center-block" alt="Air Force Logo" /></li>
+          <?php if(have_rows('clients')): while(have_rows('clients')): the_row(); ?>
+            <li><img src="<?php the_sub_field('client_image'); ?>" class="img-responsive center-block" alt="<?php the_sub_field('client_name'); ?>" /></li>
+          <?php endwhile; endif; ?>
         </ul>
       </div>
     </div>
@@ -126,84 +127,65 @@
   <section class="section fp-auto-height-responsive" id="section3">
     <div class="container">
       <h1>Testimonials</h1>
-      <div id="testimonialSlider" class="carousel slide keep-on-top" data-ride="carousel">
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <div class="caption">
-              <p class="testimonial">"Davis Defense... met the highest standards set in the Quality Assurance Surveillance Plan."</p>
-              <p class="testimonial-author">-Program Manager, Engineer Systems (USMC)</p>
-            </div>
-          </div>
-          <div class="item">
-            <div class="caption">
-              <p class="testimonial">"The contractor did an exceptional job executing all tasks and deliverables fo PM AAA and PM MHTV either on-time or ahead of schedule. The contractor consistently worked under tight timelines and did an exceptional job responding to countless critical actions within the Program Offices."</p>
-              <p class="testimonial-author">-Program Manager, Amphibious Assault Vehicles and Program Manager, Medium and Heavy Tactical Vehicles (PEO LS).</p>
-            </div>
-          </div>
-          <div class="item">
-            <div class="caption">
-              <p class="testimonial">"The contractor did an exceptional job maintaining a full and operational staff not less than 95% of the time."</p>
-              <p class="testimonial-author">-Program Manager, Amphibious Assault Vehicles and Program Manager, Medium and Heavy Tactical Vehicles (PEO LS)</p>
-            </div>
-          </div>
-          <div class="item">
-            <div class="caption">
-              <p class="testimonial">"The attentive leadership and an extremely skilled workforce continued to make for a pleasant and productive experiences."</p>
-              <p class="testimonial-author">-Program Manager, Amphibious Assault Vehicles and Program Manager, Medium and Heavy Tactical Vehicles (PEO LS).</p>
-            </div>
+      <?php if(have_rows('testimonials')): ?>
+        <div id="testimonialSlider" class="carousel slide keep-on-top" data-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <?php $item = 0; while(have_rows('testimonials')): the_row(); ?>
+              <div class="item<?php if($item==0){echo ' active'; ?>">
+                <div class="caption">
+                  <p class="testimonial"><?php the_sub_field('testimonial'); ?></p>
+                  <p class="testimonial-author">- <?php the_sub_field('testimonial_author'); ?></p>
+                </div>
+              </div>
+            <?php $item++; endwhile; ?>
           </div>
         </div>
-      </div>
+      <?php endif; ?>
     </div>
     <div class="teaming-vehicles">
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
             <h3>Teaming &amp; Business Opps</h3>
-            <a href="#" class="btn-main">Learn More</a>
+            <a href="<?php the_field('teaming_business_opps_link'); ?>" class="btn-main">Learn More</a>
           </div>
           <div class="col-sm-6">
             <h3>Contract Vehicles</h3>
-            <a href="#" class="btn-main">Learn More</a>
+            <a href="<?php the_field('contract_vehicles_link'); ?>" class="btn-main">Learn More</a>
           </div>
         </div>
       </div>
     </div>
     <div class="section3-img"></div>
   </section>
-  <section class="section fp-auto-height-responsive" id="section4">
-    <div class="container">
-      <h1>Stay Updated</h1>
-      <div class="blog-post-summary">
-        <div class="media">
-          <div class="media-left">
-            <p>NOV 12</p>
+  <?php 
+    $recent_posts = new WP_Query('posts_per_page' => 2, 'post_status' => 'publish');
+    if($recent_posts->have_posts()): 
+  ?>
+    <section class="section fp-auto-height-responsive" id="section4">
+      <div class="container">
+        <h1>Stay Updated</h1>
+        <?php while($recent_posts->have_posts()): $recent_posts->the_post(); ?>
+          <div class="blog-post-summary">
+            <div class="media">
+              <div class="media-left">
+                <p><?php echo get_the_date('M d'); ?></p>
+              </div>
+              <div class="media-body">
+                <h4 class="media-header"><?php the_title(); ?><small>by <?php the_author(); ?></small></h4>
+                <?php the_excerpt(); ?>
+                <a href="<?php the_permalink(); ?>" class="read-more">READ MORE</a>
+              </div>
+            </div>
           </div>
-          <div class="media-body">
-            <h4 class="media-header">Title of blog post one<small>by john doe</small></h4>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, Lorem ipsum dolor sit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna...</p>
-            <a href="#" class="read-more">READ MORE</a>
-          </div>
+        <?php endwhile; ?>
+        <div class="btn-inline">
+          <a href="<?php echo home_url('blog'); ?>" class="btn-main btn-clear">Our Blog</a>
+          <a href="<?php echo home_url('subscribe'); ?>" class="btn-main btn-clear">Subscribe</a>
         </div>
       </div>
-      <div class="blog-post-summary">
-        <div class="media">
-          <div class="media-left">
-            <p>NOV 12</p>
-          </div>
-          <div class="media-body">
-            <h4 class="media-header">Title of blog post one<small>by john doe</small></h4>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, Lorem ipsum dolor sit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna...</p>
-            <a href="#" class="read-more">READ MORE</a>
-          </div>
-        </div>
-      </div>
-      <div class="btn-inline">
-        <a href="#" class="btn-main btn-clear">Our Blog</a>
-        <a href="#" class="btn-main btn-clear">Subscribe</a>
-      </div>
-    </div>
-  </section>
+    </section>
+  <?php endif; wp_reset_postdata(); ?>
   <section class="section fp-auto-height-responsive" id="section5">
     <div class="container">
       <div class="row">
@@ -215,39 +197,15 @@
             <div class="col-sm-6">
               <div class="contact-info">
                 <h3>Address</h3>
-                <p>475 Aquia Towne Center Drive<br />Suite #401, Stafford, VA 22554</p>
+                <p><?php the_field('street_address1', 'option'); ?><br /><?php echo get_field('street_address2', 'option') ? get_field('street_address2', 'option') . ', ' : ''; ?><?php the_field('city_state_zip', 'option'); ?></p>
                 <h3>Phone</h3>
-                <p>540.548.5980</p>
+                <p><?php the_field('phone', 'option'); ?></p>
                 <h3>Fax</h3>
-                <p>540.542.3079</p>
+                <p><?php the_field('fax', 'option'); ?></p>
               </div>
             </div>
             <div class="col-sm-6">
-              <div class="footer-contact-form">
-                <div class="form-group">
-                  <label for="your-name" class="sr-only">Name</label>
-                  <input type="text" id="your-name" name="your-name" class="form-control" placeholder="NAME" />
-                </div>
-                <div class="form-group">
-                  <label for="phone" class="sr-only">Phone Number</label>
-                  <input type="text" id="phone" name="phone" class="form-control" placeholder="PHONE #" />
-                </div>
-                <div class="form-group">
-                  <label for="email" class="sr-only">Email</label>
-                  <input type="text" id="email" name="email" class="form-control" placeholder="EMAIL" />
-                </div>
-                <div class="form-group">
-                  <label for="subject" class="sr-only">What is this regarding</label>
-                  <input type="text" id="subject" name="subject" class="form-control" placeholder="WHAT IS THIS REGARDING" />
-                </div>
-                <div class="form-group">
-                  <label for="comments" class="sr-only">Comments</label>
-                  <textarea id="comments" name="comments" rows="4" class="form-control" placeholder="COMMENTS"></textarea>
-                </div>
-                <div class="form-group">
-                  <input type="submit" class="btn-main" value="SEND" />
-                </div>
-              </div>
+              <?php echo do_shortcode('[contact_form_shortcode]'); ?>
             </div>
           </div>
         </div>
@@ -299,4 +257,4 @@
     </div>
   </section>
 </main>
-<?php get_footer('home'); ?>
+<?php get_footer(); ?>
