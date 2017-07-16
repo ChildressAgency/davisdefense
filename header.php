@@ -26,14 +26,18 @@
       <?php endif; ?>
       <a href="<?php echo home_url('apply-now'); ?>" class="apply-now pull-right hidden-xs">APPLY NOW</a>
       <div class="header-social pull-right hidden-xs">
-        <?php if(get_field('facebook', 'option')): ?>
-          <a href="<?php the_field('facebook', 'option'); ?>" target="_blank"><i class="fa fa-facebook-official"></i></a>
+        <?php
+          $facebook = get_field('facebook', 'option');
+          $twitter = get_field('twitter', 'option');
+          $linkedin = get_field('linkedin', 'option');
+        if($facebook): ?>
+          <a href="<?php echo $facebook; ?>" target="_blank"><i class="fa fa-facebook-official"></i></a>
         <?php endif; 
-        if(get_field('twitter', 'option')): ?>
-          <a href="<?php the_field('twitter', 'option'); ?>" target="_blank"><i class="fa fa-twitter"></i></a>
+        if($twitter): ?>
+          <a href="<?php echo $twitter; ?>" target="_blank"><i class="fa fa-twitter"></i></a>
         <?php endif; 
-        if(get_field('linkedin', 'option')): ?>
-          <a href="<?php the_field('linkedin', 'option'); ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
+        if($linkedin): ?>
+          <a href="<?php echo $linkedin; ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
         <?php endif; ?>
       </div>
       <div class="navbar-header">
@@ -53,14 +57,14 @@
           <li<?php if(is_page('contact-us')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('contact-us'); ?>">Contact Us</a></li>
           <li class="visible-xs-block">
             <div class="header-menu-social">
-              <?php if(get_field('facebook', 'option')): ?>
-                <a href="<?php the_field('facebook', 'option'); ?>" target="_blank"><i class="fa fa-facebook-official"></i></a>
+              <?php if($facebook): ?>
+                <a href="<?php echo $facebook; ?>" target="_blank"><i class="fa fa-facebook-official"></i></a>
               <?php endif; 
-              if(get_field('twitter', 'option')): ?>
-                <a href="<?php the_field('twitter', 'option'); ?>" target="_blank"><i class="fa fa-twitter"></i></a>
+              if($twitter): ?>
+                <a href="<?php echo $twitter; ?>" target="_blank"><i class="fa fa-twitter"></i></a>
               <?php endif; 
-              if(get_field('linkedin', 'option')): ?>
-                <a href="<?php the_field('linkedin', 'option'); ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
+              if($linkedin): ?>
+                <a href="<?php echo $linkedin; ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
               <?php endif; ?>
             </div>
           </li>
