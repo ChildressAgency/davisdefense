@@ -17,9 +17,13 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body <?php body_class(); ?>>
     <nav class="navbar-fixed">
-      <a href="<?php echo home_url('employee-login'); ?>" class="login-out pull-left hidden-xs">EMPLOYEE LOGIN</a>
+      <?php if(is_user_logged_in()): ?>
+        <a href="<?php echo wp_logout_url(home_url()); ?>" class="login-out pull-left hidden-xs">LOGOUT</a>
+      <?php else: ?>
+        <a href="<?php echo home_url('employee-login'); ?>" class="login-out pull-left hidden-xs">EMPLOYEE LOGIN</a>
+      <?php endif; ?>
       <a href="<?php echo home_url('apply-now'); ?>" class="apply-now pull-right hidden-xs">APPLY NOW</a>
       <div class="header-social pull-right hidden-xs">
         <?php if(get_field('facebook', 'option')): ?>
@@ -61,7 +65,11 @@
             </div>
           </li>
           <li class="visible-xs-block menu-login-out">
-            <a href="<?php echo home_url('employee-login'); ?>">EMPLOYEE LOGIN</a>
+            <?php if(is_user_logged_in()): ?>
+              <a href="<?php echo wp_logout_url(home_url()); ?>">LOGOUT</a>
+            <?php else: ?>
+              <a href="<?php echo home_url('employee-login'); ?>">EMPLOYEE LOGIN</a>
+            <?php endif; ?>
           </li>
           <li class="visible-xs-block menu-apply-now">
             <a href="<?php echo home_url('apply-now'); ?>">APPLY NOW</a>
