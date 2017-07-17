@@ -19,9 +19,9 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
-            <a class="media">
+            <a href="<?php the_field('services_icon_link'); ?>" class="media">
               <div class="media-left media-middle">
-                <span href="<?php the_field('services_icon_link'); ?>" class="services-icon"></span>
+                <span class="services-icon"></span>
               </div>
               <div class="media-body">
                 <h3 class="media-heading">Services</h3>
@@ -30,9 +30,9 @@
             </a>
           </div>
           <div class="col-sm-4">
-            <a class="media">
+            <a href="<?php the_field('contracts_icon_link'); ?>" class="media">
               <div class="media-left media-middle">
-                <span href="<?php the_field('contracts_icon_link'); ?>" class="contracts-icon"></span>
+                <span class="contracts-icon"></span>
               </div>
               <div class="media-body">
                 <h3 class="media-heading">Contracts</h3>
@@ -41,9 +41,9 @@
             </a>
           </div>
           <div class="col-sm-4">
-            <a class="media">
+            <a href="<?php the_field('training_icon_link'); ?>" class="media">
               <div class="media-left media-middle">
-                <span href="<?php the_field('training_icon_link'); ?>" class="training-icon"></span>
+                <span class="training-icon"></span>
               </div>
               <div class="media-body">
                 <h3 class="media-heading">Training</h3>
