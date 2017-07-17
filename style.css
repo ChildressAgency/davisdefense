@@ -145,7 +145,8 @@ nav .apply-now{
   -webkit-transition:background-color .3s ease;
   transition:background-color .3s ease;
 }
-.btn-main:hover{
+.btn-main:hover,
+.btn-main:focus{
   text-decoration:none;
   color:#fff;
   background-color:#822222;
