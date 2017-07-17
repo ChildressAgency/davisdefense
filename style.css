@@ -866,6 +866,15 @@ article.single-col h2,
   margin-bottom:25px;
 }
 
+#awardedTaskOrders-img{
+  min-height:380px;
+  background-image:url(images/task-orders-background.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:65% 0%;
+  box-shadow:inset 0px -24px 15px -19px #333;
+}
+
 
 @media (max-width:400px){
   .emp-links-block{
