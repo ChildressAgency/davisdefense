@@ -1,57 +1,47 @@
 <?php get_header(); ?>
-
-
-        <div class="row">
-            <!-- section -->
-        <section class="col-xs-12 single page-content">
-            <div class="blogContainer">
-              <div class="col-xs-12 col-sm-8 col-sm-offset-2 blogArea wow slideInLeft ">
-              <h1>OUR BLOG</h1>
-              <div class="clearfix"></div>
-              <div class="subButton"><a href="#" class="btn-main right-side">SUBSCRIBE</a></div>
-              <div class="clearfix"></div>
-            <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
-              <div class="col-xs-2 redBox">
-                <h3>
-                  <?php echo get_the_date('F '); ?><br/>
-                  <?php echo get_the_date(' j'); ?>
-                </h3>
-              </div>
-              <div class="col-xs-9 col-xs-offset-1 blueBox">
-                <article id="post-<?php the_ID(); ?>" <?php post_class('postBox'); ?>>
-                    <h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-                    <span><p><?php the_field('post_author'); ?></p></span>
-                    <?php the_content(); // Dynamic Content ?>
-                </article>
-                <!-- /article -->
-              </div>
-            <?php endwhile; ?>
-            <?php else: ?>
-                <!-- article -->
-                <article>
-                    <h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-                </article>
-                <!-- /article -->
+<main id="main">
+  <section id="blogSingle">
+    <div class="container">
+      <h1>Our Blog</h1>
+      <p class="text-center"><a href="<?php echo home_url('subscribe'); ?>" class="btn-main">Subscribe</a></p>
+      <div class="row blog-post">
+        <?php if(have_posts()): while(have_posts()): the_post(); ?>
+          <div class="col-sm-2">
+            <div class="blog-date">
+              <p><?php echo get_the_date('M d'); ?></p>
+            </div>
+          </div>
+          <div class="col-sm-10">
+            <div class="blog-content-wrapper">
+            <div class="blog-content">
+              <h4 class="blog-title"><?php the_title(); ?><small>by <?php the_author(); ?></small></h4>
+              <?php the_content(); ?>
+            </div>
+            </div>
+          </div>
+        <?php endwhile; endif; ?>
+      </div>
+    </div>
+    <div class="follow-us">
+      <div class="container">
+        <h2>FOLLOW US ON SOCIAL MEDIA</h2>
+        <div class="follow-us-social">
+          <?php
+            $facebook = get_field('facebook', 'option'); 
+            $twitter = get_field('twitter', 'option'); 
+            $linkedin = get_field('linkedin', 'option');
+            if($facebook): ?>
+              <a href="<?php echo $facebook; ?>"><i class="fa fa-facebook-official"></i></a>
+            <?php endif; 
+            if($twitter): ?>
+              <a href="<?php echo $twitter; ?>"><i class="fa fa-twitter"></i></a>
+            <?php endif; 
+            if($linkedin): ?>
+              <a href="<?php echo $linkedin; ?>"><i class="fa fa-linkedin"></i></a>
             <?php endif; ?>
-          </div><!-- blogArea -->
-        </div><!-- blogContainer -->
-      <div class="clearfix"></div>
-      <div class="whiteBand-2">
-				<h2>FOLLOW US ON SOCIAL MEDIA</h2>
-				<div class="row">
-					<div class="col-xs-6">
-						<a href="<?php the_field('twitter', 'option'); ?>" target="_blank" class="twitter wow bounce"></a>
-					</div>
-					<div class="col-xs-6">
-						<a href="<?php the_field('facebook', 'option'); ?>" target="_blank" class="facebook wow bounce"></a>
-					</div>
-				</div><!-- row -->
-			</div><!-- whiteBand-2 -->
-        </section>
-        <!--// END SINGLE //-->
         </div>
-        <!--// END ROW //-->
-        <div class="clearfix"></div>
-
+      </div>
+    </div>
+  </section>
+</main>
 <?php get_footer(); ?>
