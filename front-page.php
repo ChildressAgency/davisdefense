@@ -159,7 +159,7 @@
     <div class="section3-img"></div>
   </section>
   <?php 
-    $recent_posts = new WP_Query('posts_per_page' => 2, 'post_status' => 'publish');
+    $recent_posts = new WP_Query(array('posts_per_page' => 2, 'post_status' => 'publish'));
     if($recent_posts->have_posts()): 
   ?>
     <section class="section fp-auto-height-responsive" id="section4">

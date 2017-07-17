@@ -1,4 +1,5 @@
 <?php if(!is_front_page()): //front page footer is in front-page.php ?>
+  <?php if(!is_single() && !is_page('contact-us')): ?>
   <section id="contact">
     <div class="container">
       <div class="row">
@@ -25,7 +26,8 @@
       </div>
     </div>
     <div id="contact-img"></div>
-  </section>      
+  </section>  
+  <?php endif; ?>    
   <footer class="footer">
     <div class="login-section">
       <div class="container">
