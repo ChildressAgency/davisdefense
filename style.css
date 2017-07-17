@@ -851,6 +851,9 @@ article.single-col h2,
 #teammates ul>li{
   margin-top:25px;
 }
+#teammates ul>li img{
+  max-height:50px;
+}
 
 
 @media (max-width:400px){
