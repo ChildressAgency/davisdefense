@@ -9,7 +9,7 @@
           <h2>General Services Administration Schedules</h2>
           <a href="http://www.gsaadvantage.gov">www.gsaadvantage.gov</a>
           <p><?php the_field('gsa_schedules_text'); ?></p>
-          <a href="<?php the_field('gsa_contract_price_list'); ?>" class="btn-main">GSA Contract Price List</a>
+          <a href="<?php the_field('gsa_schedules_price_list'); ?>" class="btn-main">GSA Contract Price List</a>
         </div>
         <div class="col-sm-6">
           <h2>Seaport Enhanced (Seaport-E)</h2>
