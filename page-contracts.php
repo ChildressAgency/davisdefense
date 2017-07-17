@@ -3,7 +3,7 @@
   <section id="contracts">
     <div class="container">
       <h1>Contracts</h1>
-      <p class="text-center"><a href="<?php echo home_url('task-orders'); ?>">Task Orders</a></p>
+      <p class="text-center"><a href="<?php echo home_url('task-orders'); ?>" class="btn-main">Task Orders</a></p>
       <div class="row">
         <div class="col-sm-6">
           <h2>General Services Administration Schedules</h2>
