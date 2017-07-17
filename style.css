@@ -706,13 +706,13 @@ article.single-col h2,
   text-transform:uppercase;
 }
 .google-map{
-  background-color:#ddd;
+  /*background-color:#ddd;*/
   padding-left:0;
   padding-right:0;
 }
 .acf-map{
   width:100%;
-  height:100%;
+  height:400px;
 }
 .acf-map img{
   max-width:inherit !important;
