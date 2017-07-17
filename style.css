@@ -556,6 +556,10 @@ h1{
   border-color:#fff;
   float:right;
 }
+.login-section .btn-main{
+  color:#fff;
+  border-color:#fff;
+}
 .footer-login-form a.control-label{
   color:#fff;
 }

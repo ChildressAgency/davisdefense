@@ -35,7 +35,7 @@ function davisdefense_scripts(){
 
   wp_register_script(
     'fullPage',
-    get_template_directory_uri() . '/js/fullPage.min.js',
+    get_template_directory_uri() . '/js/jquery.fullPage.min.js',
     array('jquery'),
     '',
     false

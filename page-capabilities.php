@@ -68,20 +68,17 @@
       <div class="row">
         <div class="col-sm-6">
           <div class="logistic-content">
-            <h2>Logistics and life cycle support</h2>
             <?php the_field('logistics_life_cycle_support_content'); ?>
           </div>
         </div>
         <div class="col-sm-6">
           <div class="logistic-content">
-            <h2>Quality Assurance (QA) Support</h2>
             <?php the_field('quality_assurance_support_content'); ?>
           </div>
         </div>
         <div class="clearfix"></div>
         <div class="col-sm-6">
           <div class="logistic-content">
-            <h2>Equipment Sustainment &amp; Training</h2>
             <?php the_field('equipment_sustainment_training_content'); ?>
           </div>
         </div>

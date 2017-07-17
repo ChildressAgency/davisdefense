@@ -132,7 +132,7 @@
         <div id="testimonialSlider" class="carousel slide keep-on-top" data-ride="carousel">
           <div class="carousel-inner" role="listbox">
             <?php $item = 0; while(have_rows('testimonials')): the_row(); ?>
-              <div class="item<?php if($item==0){echo ' active'; ?>">
+              <div class="item<?php if($item==0){ echo ' active'; } ?>">
                 <div class="caption">
                   <p class="testimonial"><?php the_sub_field('testimonial'); ?></p>
                   <p class="testimonial-author">- <?php the_sub_field('testimonial_author'); ?></p>
