@@ -9,6 +9,7 @@
             <ul class="list-unstyled list-inline animated bounce">
               <?php while(have_rows('company_recognitions')): the_row(); ?>
                 <li><img src="<?php the_sub_field('recognition_image'); ?>" class="img-responsive" alt="<?php the_sub_field('recognition_title'); ?>" /></li>
+              <?php endwhile; ?>
             </ul>
           </div>
         </div>
