@@ -1,194 +1,124 @@
 <?php get_header(); ?>
-
-<div id="fullpage">
-	<div class="section " id="section0">
-		<div class="capabilities">
-			<h1>CAPABILITIES</h1>
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-4 col-md-2 capabilitiesContentLink">
-						<a href="#businessAnalytics" class="scroll-down">
-							<img class="wow bounce" src="<?php echo get_template_directory_uri(); ?>/images/business-icon.png" alt="Business Analytics" />
-							<h2>BUSINESS ANALYTICS</h2>
-							<?php the_field('business_analytics', 'option'); ?>
-						</a>
-					</div>
-					<div class="col-sm-4 col-md-2 capabilitiesContentLink">
-						<a href="#logistics" class="scroll-down">
-							<img class="wow bounce" src="<?php echo get_template_directory_uri(); ?>/images/logistics-icon.png" alt="Logistics" />
-							<h2>LOGISTICS</h2>
-							<?php the_field('logistics', 'option'); ?>
-						</a>
-					</div>
-					<div class="col-sm-4 col-md-2 capabilitiesContentLink">
-						<a href="#engineering" class="scroll-down">
-							<img class="wow bounce" src="<?php echo get_template_directory_uri(); ?>/images/engineering-icon.png" alt="Engineering" />
-							<h2>ENGINEERING</h2>
-							<?php the_field('engineering', 'option'); ?>
-						</a>
-					</div>
-					<div class="clearfix visible-sm-block"></div>
-					<div class=" col-sm-4 col-md-2 capabilitiesContentLink">
-						<a href="#cyber" class="scroll-down">
-							<img class="wow bounce" src="<?php echo get_template_directory_uri(); ?>/images/cyber-icon.png" alt="Cyber" />
-							<h2>CYBER</h2>
-							<?php the_field('cyber', 'option'); ?>
-						</a>
-					</div>
-					<div class=" col-sm-4 col-md-2 capabilitiesContentLink">
-						<a href="#education" class="scroll-down">
-							<img class="wow bounce" src="<?php echo get_template_directory_uri(); ?>/images/education-icon.png" alt="Education" />
-							<h2>EDUCATION</h2>
-							<?php the_field('education', 'option'); ?>
-						</a>
-					</div>
-					<div class=" col-sm-4 col-md-2 capabilitiesContentLink">
-						<a href="#research" class="scroll-down">
-							<img class="wow bounce" src="<?php echo get_template_directory_uri(); ?>/images/rd-icon.png" alt="Research &amp; Development" />
-							<h2>RESEARCH &#38; DEVELOPMENT</h2>
-							<?php the_field('research_&_development', 'option'); ?>
-						</a>
-					</div>
-				</div><!-- row -->
-			</div><!-- container -->
-
-		</div><!-- capabilities -->
-		<div class="frogMan wow slideInUp ">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/frogman.png" class="img-responsive center-block" alt="Frogman" />			
-		</div>
-	</div>
-	<div class="section " id="businessAnalytics">
-			<div class="container">
-					<div class="businessAnalyticsContent">
-						<h1>BUSINESS ANALYTICS</h1>
-						<?php the_field('business_analytics_content'); ?>
-						<?php the_field('business_analytics_list') ?>
-					</div>
-			</div><!-- container -->
-		<div class="businessAnalytics"></div><!-- businessAnalytics -->
-	</div><!-- section1 -->
-	<div class="section" id="logistics">
-		<div class="logistics" id="logistics">
-			<div class="container">
-				<div class="row">
-					<div class="logisticsContainer">
-						<h1>LOGISTICS</h1>
-						<div class="col-xs-12 col-sm-6 logisticsContent">
-							<h2>LOGISTICS AN LIFE CYCLE SUPPORT</h2>
-							<?php the_field('logistics_and_life_cycle_support_content'); ?>
-							<span><?php the_field('logistics_and_life_cycle_support_list'); ?></span>
-						</div>
-						<div class="col-xs-12 col-sm-6 logisticsContent">
-							<h2>QUALITY ASSURANCE (QA) SUPPORT</h2>
-							<?php the_field('quality_assurance_support_content'); ?>
-							<span><?php the_field('quality_assurance_support_list'); ?></span>
-						</div>
-					</div>
-				</div>
-				<div class="clearfix"></div>
-				<div class="row">
-						<div class="col-xs-12 col-sm-6 logisticsContent">
-							<h2>EQUIPMENT SUSTAINMENT &amp; TRAINING</h2>
-							<?php the_field('equipment_sustainment_and_training_content'); ?>
-							<span><?php the_field('equipment_sustainment_and_training_list'); ?></span>
-						</div>
-				</div><!-- row -->
-			</div><!-- container -->
-		</div><!-- logistics -->
-	</div><!-- section2 -->
-	<div class="section" id="engineering">
-		<div class="engineering" id="engineering">
-			
-				<h1>ENGINEERING</h1>
-				<div class="container">
-						<div class="engineeringContent">
-							<?php the_field('engineering_content'); ?>
-							<span><?php the_field('engineering_list'); ?></span>
-						</div>
-				</div><!-- container -->
-			<div class="engineeringBackground wow slideInUp ">
-				<!--<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/engineering-background.jpg" class="img-responsive center-block" alt="Sniper" />-->
-			</div><!-- engineeringBackground -->
-		</div><!-- engineering -->
-	</div><!-- section3 -->
-	<div class="section" id="cyber">
-		<div class="cyber">
-			<h1>CYBER</h1>
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 col-sm-6 col-sm-offset-3 cyberContent">
-						<h2>PROGRAM OFFICE SUPPORT</h2>
-						<?php the_field('program_office_support_content'); ?>
-						<span><?php the_field('program_office_support_list'); ?></span>
-						<h2>POST DEPLOYMENT SYSTEMS SUPPORT</h2>
-						<?php the_field('post_deployment_systems_support_content'); ?>
-						<span><?php the_field('post_deployment_systems_support_list'); ?></span>
-					</div>
-				</div><!-- row -->
-			</div><!-- container -->
-		</div><!-- cyber -->
-	</div><!-- section4 -->
-	<div class="section" id="education">
-		<div class="education">
-			<h1>EDUCATION</h1>
-			<div class="container">
-					<div class="whiteBackground">
-						<?php the_field('education_content'); ?>
-						<span><?php the_field('education_list'); ?></span>
-					</div>
-			</div><!-- container -->
-		</div><!-- education -->
-			<div class="education-background">
-				<!--<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/education-background.jpg" class="img-responsive center-block" alt="soldiers" />-->
-			</div>
-	</div><!-- section5 -->
-	<div class="section" id="research">
-		<div class="research">
-			<div class="container">
-				<h1>RESEARCH AND DEVELOPMENT</h1>
-				<div class="row">
-					<div class="col-xs-12 col-sm-6 col-sm-offset-3">
-						<?php the_field('research_and_development_content'); ?>
-						<span><?php the_field('research_and_development_list'); ?></span>
-						<h2>IT ADMINISTRATION</h2>
-						<?php the_field('it_administration_content'); ?>
-						<span><?php the_field('it_administration_list'); ?></span>
-					</div>
-				</div><!-- row -->
-			</div><!-- container -->
-		</div><!-- research -->
-	</div><!-- section6 -->
-
-	<div class="section" id="section7">
-		
-			<div class="contact-us">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-sm-4 contactTitle">
-							<h1>CONTACT US</h1>
-						</div>
-						<div class="col-xs-12 col-sm-4 contactInfo">
-							<div class="col-xs-6 col-sm-12">
-								<h3>ADDRESS</h3>
-								<p>
-									475 AQUIA TOWNE CENTER DRIVE<BR />
-									SUITE #401 STAFFORD, VA 22504
-								</p>
-							</div>
-							<div class="col-xs-6 col-sm-12">
-								<h3>PHONE</h3>
-								<p>540. 548. 5980</p>
-								<h3>FAX</h3>
-								<p>540 542 3079</p>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-4 contactForm wow slideInUp">
-							<?php echo do_shortcode('[contact-form-7 id="4" title="Contact form 1"]'); ?>
-						</div>
-					</div><!--row -->
-				</div><!-- container -->
-			</div><!-- contact-us -->
-		<div class="contactBackground"></div><!-- contactBackground -->
-	</div><!-- section7 -->
-</div><!--full-page -->
-		<?php get_footer(); ?>
+<main id="main">
+  <section id="capabilities">
+    <div class="caps-icons keep-on-top">
+      <div class="container">
+        <h1>Capabilities</h1>
+        <div class="row">
+          <div class="col-sm-4 col-md-2">
+            <a href="#businessAnalytics" class="cap-link">
+              <span class="business-icon"></span>
+              <h2>Business Analytics</h2>
+              <p><?php the_field('business_analytics_icon_summary'); ?></p>
+            </a>
+          </div>
+          <div class="col-sm-4 col-md-2">
+            <a href="#logistics" class="cap-link">
+              <span class="logistics-icon"></span>
+              <h2>Logistics</h2>
+              <p><?php the_field('logistics_icon_summary'); ?></p>
+            </a>
+          </div>
+          <div class="col-sm-4 col-md-2">
+            <a href="#engineering" class="cap-link">
+              <span class="engineering-icon"></span>
+              <h2>Engineering</h2>
+              <p><?php the_field('engineering_icon_summary'); ?></p>
+            </a>
+          </div>
+          <div class="clearfix visible-sm-block"></div>
+          <div class="col-sm-4 col-md-2">
+            <a href="#cyber" class="cap-link">
+              <span class="cyber-icon"></span>
+              <h2>Cyber</h2>
+              <p><?php the_field('cyber_icon_summary'); ?></p>
+            </a>
+          </div>
+          <div class="col-sm-4 col-md-2">
+            <a href="#education" class="cap-link">
+              <span class="education-icon"></span>
+              <h2>Education</h2>
+              <p><?php the_field('education_icon_summary'); ?></p>
+            </a>
+          </div>
+          <div class="col-sm-4 col-md-2">
+            <a href="#researchDevelopment" class="cap-link">
+              <span class="research-icon"></span>
+              <h2>Research &amp; Development</h2>
+              <p><?php the_field('research_development_icon_summary'); ?></p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="capabilities-img"></div>        
+  </section>
+  <section id="businessAnalytics">
+    <div class="container">
+      <h1>Business Analytics</h1>
+      <article class="single-col">
+        <?php the_field('business_analytics_section_content'); ?>
+      </article>
+    </div>
+    <div id="business-analytics-img"></div>
+  </section>
+  <section id="logistics">
+    <div class="container">
+      <h1>Logistics</h1>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="logistic-content">
+            <?php the_field('logistics_life_cycle_support_content'); ?>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="logistic-content">
+            <?php the_field('quality_assurance_support_content'); ?>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-sm-6">
+          <div class="logistic-content">
+            <?php the_field('equipment_sustainment_training_content'); ?>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="logistics-img visible-xs-block"></div>
+  </section>
+  <section id="engineering">
+    <div class="container">
+      <h1>Engineering</h1>
+      <article class="single-col">
+        <?php the_field('engineering_section_content'); ?>
+      </article>
+    </div>
+    <div id="engineering-img"></div>
+  </section>
+  <section id="cyber">
+    <div class="container">
+      <h1>Cyber</h1>
+      <article class="single-col">
+        <?php the_field('cyber_section_content'); ?>
+      </article>
+    </div>
+  </section>
+  <section id="education">
+    <div class="container">
+      <h1>Education</h1>
+      <article class="single-col">
+        <?php the_field('education_section_content'); ?>
+      </article>
+    </div>
+    <div id="education-img"></div>
+  </section>
+  <section id="researchDevelopment">
+    <div class="container">
+      <h1>Research And Development</h1>
+      <article class="single-col">
+        <?php the_field('research_development_section_content'); ?>
+      </article>
+    </div>
+  </section>
+</main>
+<?php get_footer(); ?>
