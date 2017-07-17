@@ -233,14 +233,18 @@
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/davis-logo-small.png" alt="Davis Defense Logo Small" />
           </a>
           <div class="footer-social pull-right">
-            <?php if(get_field('facebook', 'option')): ?>
-              <a href="<?php the_field('facebook', 'option'); ?>" target="_blank"><i class="fa fa-facebook-official"></i></a>
+            <?php 
+              $facebook = get_field('facebook', 'option');
+              $twitter = get_field('twitter', 'option');
+              $linkedin = get_field('linkedin', 'option');
+              if($facebook): ?>
+                <a href="<?php echo $facebook; ?>" target="_blank"><i class="fa fa-facebook-official"></i></a>
             <?php endif; 
-            if(get_field('twitter', 'option')): ?>
-              <a href="<?php the_field('twitter', 'option'); ?>" target="_blank"><i class="fa fa-twitter"></i></a>
+            if($twitter): ?>
+              <a href="<?php echo $twitter; ?>" target="_blank"><i class="fa fa-twitter"></i></a>
             <?php endif;
-            if (get_field('linkedin', 'option')): ?>
-              <a href="<?php the_field('linkedin', 'option'); ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
+            if ($linkedin): ?>
+              <a href="<?php echo $linkedin; ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
             <?php endif; ?>
           </div>
         </div>
