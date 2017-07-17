@@ -19,7 +19,7 @@
               </div>
             </div>
             <div class="col-sm-6">
-              <?php echo do_shortcode('[contact_form_shortcode]'); ?>
+              <?php echo do_shortcode('[contact-form-7 id="5" title="Contact form 1"]'); ?>
             </div>
           </div>
         </div>
