@@ -145,7 +145,8 @@ nav .apply-now{
   -webkit-transition:background-color .3s ease;
   transition:background-color .3s ease;
 }
-.btn-main:hover{
+.btn-main:hover,
+.btn-main:focus{
   text-decoration:none;
   color:#fff;
   background-color:#822222;
@@ -857,6 +858,22 @@ article.single-col h2,
 }
 #teammates ul>li img{
   max-height:50px;
+}
+
+#otherTransactionAuthority p{
+  margin-bottom:3px;
+}
+#otherTransactionAuthority .transaction-authority{
+  margin-bottom:25px;
+}
+
+#awardedTaskOrders-img{
+  min-height:380px;
+  background-image:url(images/task-orders-background.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:65% 0%;
+  box-shadow:inset 0px -24px 15px -19px #333;
 }
 
 
