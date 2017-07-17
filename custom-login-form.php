@@ -18,5 +18,5 @@
     <input type="submit" name="wp-submit" id="wp-submit" class="btn-main btn-inverse" value="SIGN IN" />
     <input type="hidden" name="redirect_to" value="<?php echo home_url('employee-links'); ?>" />
   </form>
-  <a href="http://dev.childressagency.com/davis-defense/wp-login.php?action=lostpassword" class="control-label">FORGOT USER ID OR PASSWORD?</a>
+  <a href="<?php echo home_url('wp-login.php?action=lostpassword'); ?>" class="control-label">FORGOT USER ID OR PASSWORD?</a>
 </div>
