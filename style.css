@@ -859,6 +859,13 @@ article.single-col h2,
   max-height:50px;
 }
 
+#otherTransactionAuthority p{
+  margin-bottom:3px;
+}
+#otherTransactionAuthority .transaction-authority{
+  margin-bottom:25px;
+}
+
 
 @media (max-width:400px){
   .emp-links-block{
