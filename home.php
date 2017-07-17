@@ -6,7 +6,7 @@
       <p class="text-center"><a href="<?php echo home_url('subscribe'); ?>" class="btn-main">Subscribe</a></p>
       <?php 
         $blog_posts = new WP_Query(array('posts_per_page' => 2, 'post_status' => 'publish'));
-        if($blog_posts->have_posts()): while($blog_posts->have_posts()): $bog_posts->the_post(); ?>
+        if($blog_posts->have_posts()): while($blog_posts->have_posts()): $blog_posts->the_post(); ?>
           <div class="blog-post-summary">
             <div class="media">
               <div class="media-left">
