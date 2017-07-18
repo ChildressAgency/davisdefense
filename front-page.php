@@ -2,7 +2,7 @@
 <main id="hp-main">
   <section class="section fp-auto-height-responsive" id="section0">
     <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" class="img-responsive center-block animated slideInDown" alt="Davis Defense Logo" style="margin-top:40px;" />
-    <div class="company-awards-bg" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/images/home-header-image.png);">
+    <div class="company-awards-bg" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/images/home-header-image1.png);">
       <?php if(have_rows('company_recognitions')): ?>
         <div class="company-awards">
           <div class="container">
