@@ -4,6 +4,20 @@
     <div class="container">
       <h1>Contracts</h1>
       <p class="text-center"><a href="<?php echo home_url('task-orders'); ?>" class="btn-main">Task Orders</a></p>
+      <section id="otherTransactionAuthority">
+        <div class="container">
+          <article class="single-col">
+            <h2 class="text-center">Other Transaction Authority</h2>
+            <?php if(have_rows('transaction_authorities')): while(have_rows('transaction_authorities')): the_row(); ?>
+              <div class="transaction-authority">
+                <p><strong><?php the_sub_field('transaction_authority_name'); ?></strong></p>
+                <a href="<?php the_sub_field('transaction_authority_url'); ?>"><?php the_sub_field('transaction_authority_url'); ?></a>
+                <p><?php the_sub_field('transaction_authority_text'); ?></p>
+              </div>
+            <?php endwhile; endif; ?>
+          </article>
+        </div>
+      </section>
       <div class="row">
         <div class="col-sm-6">
           <h2>General Services Administration Schedules</h2>
@@ -25,20 +39,6 @@
       </div>
     </div>
     <div id="contracts-img"></div>
-  </section>
-  <section id="otherTransactionAuthority">
-    <div class="container">
-      <article class="single-col">
-        <h2 class="text-center">Other Transaction Authority</h2>
-        <?php if(have_rows('transaction_authorities')): while(have_rows('transaction_authorities')): the_row(); ?>
-          <div class="transaction-authority">
-            <p><strong><?php the_sub_field('transaction_authority_name'); ?></strong></p>
-            <a href="<?php the_sub_field('transaction_authority_url'); ?>"><?php the_sub_field('transaction_authority_url'); ?></a>
-            <p><?php the_sub_field('transaction_authority_text'); ?></p>
-          </div>
-        <?php endwhile; endif; ?>
-      </article>
-    </div>
   </section>
   <section id="teammates">
     <div class="container">
