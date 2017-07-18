@@ -6,21 +6,21 @@
         <h1>Capabilities</h1>
         <div class="row">
           <div class="col-sm-4 col-md-2">
-            <a href="#businessAnalytics" class="cap-link">
+            <a href="#businessAnalytics" class="cap-link scroller">
               <span class="business-icon"></span>
               <h2>Business Analytics</h2>
               <p><?php the_field('business_analytics_icon_summary'); ?></p>
             </a>
           </div>
           <div class="col-sm-4 col-md-2">
-            <a href="#logistics" class="cap-link">
+            <a href="#logistics" class="cap-link scroller">
               <span class="logistics-icon"></span>
               <h2>Logistics</h2>
               <p><?php the_field('logistics_icon_summary'); ?></p>
             </a>
           </div>
           <div class="col-sm-4 col-md-2">
-            <a href="#engineering" class="cap-link">
+            <a href="#engineering" class="cap-link scroller">
               <span class="engineering-icon"></span>
               <h2>Engineering</h2>
               <p><?php the_field('engineering_icon_summary'); ?></p>
@@ -28,21 +28,21 @@
           </div>
           <div class="clearfix visible-sm-block"></div>
           <div class="col-sm-4 col-md-2">
-            <a href="#cyber" class="cap-link">
+            <a href="#cyber" class="cap-link scroller">
               <span class="cyber-icon"></span>
               <h2>Cyber</h2>
               <p><?php the_field('cyber_icon_summary'); ?></p>
             </a>
           </div>
           <div class="col-sm-4 col-md-2">
-            <a href="#education" class="cap-link">
+            <a href="#education" class="cap-link scroller">
               <span class="education-icon"></span>
               <h2>Education</h2>
               <p><?php the_field('education_icon_summary'); ?></p>
             </a>
           </div>
           <div class="col-sm-4 col-md-2">
-            <a href="#researchDevelopment" class="cap-link">
+            <a href="#researchDevelopment" class="cap-link scroller">
               <span class="research-icon"></span>
               <h2>Research &amp; Development</h2>
               <p><?php the_field('research_development_icon_summary'); ?></p>

@@ -26,7 +26,7 @@ jQuery(document).ready(function($){
 
   //new WOW().init();
 
-  $('.cap-link').on('click', function(e){
+  $('.scroller').on('click', function(e){
     e.preventDefault;
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
