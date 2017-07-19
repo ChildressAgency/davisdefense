@@ -632,7 +632,7 @@ article.single-col h2,
 }
 #research-img{
   background-image:url(images/research-background2.png);
-  background-position:50% 0%;
+  background-position:right top;
   min-height:500px;
 }
 #contact-img{
@@ -862,6 +862,11 @@ article.single-col h2,
 .fp-responsive .fp-auto-height-responsive.fp-section{
   min-height:900px !important;
 }
+#cyber-img{
+  background-image:url(images/cyber-background2.png);
+  background-position:28% 0%;
+  min-height:540px;
+}
 
 
 @media (max-width:400px){
@@ -903,6 +908,9 @@ article.single-col h2,
     margin-left:-15px;
     margin-right:-15px;
   }
+  #cyber-img{
+    background-position:left top;
+  }
 }
 @media (min-width:768px){
   nav{
@@ -922,11 +930,6 @@ article.single-col h2,
   .logistic-content{
     background-color:rgba(255,255,255,.8);
     padding:20px;
-  }
-  #cyber-img{
-    background-image:url(images/cyber-background2.png);
-    background-position:28% 0%;
-    min-height:540px;
   }
   .container-sm-height{
     display:table;
