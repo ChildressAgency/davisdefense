@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 <main id="cap-main">
-  <section id="capabilities" class="section fp-auto-height-responsive">
+  <section id="firstSection" class="section fp-auto-height-responsive">
     <div class="caps-icons keep-on-top" style="margin-top:40px;">
       <div class="container">
         <h1>Capabilities</h1>
         <div class="row">
           <div class="col-sm-4 col-md-2">
-            <a href="#businessAnalytics" class="cap-link scroller">
+            <a href="#business-analytics" class="cap-link scroller">
               <span class="business-icon"></span>
               <h2>Business Analytics</h2>
               <p><?php the_field('business_analytics_icon_summary'); ?></p>
@@ -42,7 +42,7 @@
             </a>
           </div>
           <div class="col-sm-4 col-md-2">
-            <a href="#researchDevelopment" class="cap-link scroller">
+            <a href="#research-development" class="cap-link scroller">
               <span class="research-icon"></span>
               <h2>Research &amp; Development</h2>
               <p><?php the_field('research_development_icon_summary'); ?></p>
@@ -53,7 +53,7 @@
     </div>
     <div id="capabilities-img" class="bottom-bg"></div>        
   </section>
-  <section id="businessAnalytics" class="section fp-auto-height-responsive">
+  <section id="secondSection" class="section fp-auto-height-responsive">
     <div class="container">
       <h1>Business Analytics</h1>
       <article class="single-col">
@@ -62,7 +62,7 @@
     </div>
     <div id="business-analytics-img" class="bottom-bg"></div>
   </section>
-  <section id="logistics" class="section fp-auto-height-responsive">
+  <section id="thirdSection" class="section fp-auto-height-responsive">
     <div class="container">
       <h1>Logistics</h1>
       <article class="single-col">
@@ -71,7 +71,7 @@
     </div>
     <div id="logistics-img" class="bottom-bg"></div>
   </section>
-  <section id="engineering" class="section fp-auto-height-responsive">
+  <section id="fourthSection" class="section fp-auto-height-responsive">
     <div class="container">
       <h1>Engineering</h1>
       <article class="single-col">
@@ -80,7 +80,7 @@
     </div>
     <div id="engineering-img" class="bottom-bg"></div>
   </section>
-  <section id="cyber" class="section fp-auto-height-responsive">
+  <section id="fifthSection" class="section fp-auto-height-responsive">
     <div class="container">
       <h1>Cyber</h1>
       <article class="single-col">
@@ -89,7 +89,7 @@
     </div>
     <div id="cyber-img" class="bottom-bg"></div>
   </section>
-  <section id="education" class="section fp-auto-height-responsive">
+  <section id="sixthSection" class="section fp-auto-height-responsive">
     <div class="container">
       <h1>Education</h1>
       <article class="single-col">
@@ -98,7 +98,7 @@
     </div>
     <div id="education-img" class="bottom-bg"></div>
   </section>
-  <section id="researchDevelopment" class="section fp-auto-height-responsive">
+  <section id="seventhSection" class="section fp-auto-height-responsive">
     <div class="container">
       <h1>Research And Development</h1>
       <article class="single-col">
@@ -182,4 +182,17 @@
     </div>
   </section>
 </main>
+<script>
+  jQuery(document).ready(function($){
+    if(typeof $.fn.fullpage == 'function'){
+      $('#cap-main').fullpage({
+        responsiveWidth:768,
+        responsiveHeight:600,
+        slideSelector:'.fullpage-slide',
+        verticalCentered:false,
+        anchors:['capabilities', 'business-analytics', 'logistics', 'engineering', 'cyber', 'education', 'research-development', 'contact-info', 'employee-login']
+      });
+    }
+  });
+</script>
 <?php get_footer(); ?>

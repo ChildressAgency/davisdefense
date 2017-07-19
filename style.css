@@ -856,6 +856,13 @@ article.single-col h2,
   box-shadow:inset 0px -24px 15px -19px #333;
 }
 
+.fp-responsive .company-awards-bg{
+  min-height:500px !important;
+}
+.fp-responsive .fp-auto-height-responsive.fp-section{
+  min-height:900px !important;
+}
+
 
 @media (max-width:400px){
   .emp-links-block{
@@ -918,7 +925,7 @@ article.single-col h2,
   }
   #cyber-img{
     background-image:url(images/cyber-background2.png);
-    background-position:28% 100%;
+    background-position:28% 0%;
     min-height:540px;
   }
   .container-sm-height{
@@ -996,9 +1003,6 @@ article.single-col h2,
   }
 }
 @media (min-width:1200px){
-  #cyber-img{
-    background-position:left bottom;
-  }
   #research-img{
     background-position:right top;
   }

@@ -65,7 +65,7 @@
         ?>
         <div class="row">
           <div class="col-sm-4 col-md-2">
-            <a href="<?php echo home_url('capabilities/#businessAnalytics'); ?>" class="cap-link scroller">
+            <a href="<?php echo home_url('capabilities/#business-analytics'); ?>" class="cap-link scroller">
               <span class="business-icon"></span>
               <h2>Business Analytics</h2>
               <p><?php the_field('business_analytics_icon_summary', $caps_page_id); ?></p>
@@ -101,7 +101,7 @@
             </a>
           </div>
           <div class="col-sm-4 col-md-2">
-            <a href="<?php echo home_url('capabilities/#researchDevelopment'); ?>" class="cap-link scroller">
+            <a href="<?php echo home_url('capabilities/#research-development'); ?>" class="cap-link scroller">
               <span class="research-icon"></span>
               <h2>Research &amp; Development</h2>
               <p><?php the_field('research_development_icon_summary', $caps_page_id); ?></p>
@@ -262,4 +262,31 @@
     </div>
   </section>
 </main>
+<script>
+  jQuery(document).ready(function($){
+    if(typeof $.fn.fullpage == 'function'){
+      $('#hp-main').fullpage({
+        responsiveWidth:768,
+        responsiveHeight:600,
+        slideSelector:'.fullpage-slide',
+        verticalCentered: false,
+        'onLeave': function(index, nextIndex, direction){
+          $('.cap-link>span').addClass('animated bounce');
+          $('.section1-img').addClass('animated slideInRight');
+          if(index == 2){
+            $('.client-logos ul').addClass('animated bounce');
+            $('.section2-img').addClass('animated slideInUp');
+          }
+          if(index == 3){
+            $('.teaming-vehicles').addClass('animated slideInUp');
+            $('.teaming-vehicles .row').addClass('animated bounce');
+          }
+          if(index == 4){
+            $('.blog-post-summary').addClass('animated slideInLeft');
+          }
+        },
+      });
+    }
+  });
+</script>
 <?php get_footer(); ?>
