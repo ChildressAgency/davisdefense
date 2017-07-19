@@ -110,7 +110,7 @@
         </div>
       </div>
     </div>
-    <div class="section1-img"></div>
+    <div id="section1-img" class="bottom-bg"></div>
   </section>
   <section class="section fp-auto-height-responsive" id="section2">
     <div class="client-logos keep-on-top">
@@ -123,7 +123,7 @@
         </ul>
       </div>
     </div>
-    <div class="section2-img"></div>
+    <div id="section2-img" class="bottom-bg"></div>
   </section>
   <section class="section fp-auto-height-responsive" id="section3">
     <div class="container">
@@ -157,7 +157,7 @@
         </div>
       </div>
     </div>
-    <div class="section3-img"></div>
+    <div id="section3-img" class="bottom-bg"></div>
   </section>
   <?php 
     $recent_posts = new WP_Query(array('posts_per_page' => 2, 'post_status' => 'publish'));
@@ -212,7 +212,7 @@
         </div>
       </div>
     </div>
-    <div class="section5-img"></div>
+    <div id="section5-img" class="bottom-bg"></div>
   </section>
   <section class="section fp-auto-height" id="section6">
     <div class="footer">

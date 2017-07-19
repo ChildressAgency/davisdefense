@@ -22,7 +22,16 @@ jQuery(document).ready(function($){
         }
       },
     });
-  }
+	}
+	
+	if(typeof $.fn.fullpage == 'function'){
+		$('#cap-main').fullpage({
+			responsiveWidth:768,
+			responsiveHeight:600,
+			slideSelector:'.fullpage-slide',
+			verticalCentered:false
+		});
+	}
 
   //new WOW().init();
 
