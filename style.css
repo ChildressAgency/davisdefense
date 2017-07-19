@@ -269,15 +269,19 @@ h1{
   text-transform:uppercase;
 }
 
-.section1-img{
-  min-height:500px;
-  background-image:url(images/frogman.png);
-  background-repeat:no-repeat;
-  background-position:43% 0%;
-  background-size:cover;
+.bottom-bg{
   position:absolute;
   bottom:80px;
   width:100%;
+  z-index:-1;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+#section1-img,
+#capabilities-img{
+  min-height:500px;
+  background-image:url(images/frogman.png);
+  background-position:43% 0%;
 }
 
 .client-logos ul{
@@ -287,24 +291,14 @@ h1{
   margin-top:40px;  
 }
 
-.section2-img{
+#section2-img{
   min-height:600px;
-  position:absolute;
-  bottom:80px;
-  width:100%;
   background-image:url(images/climbing-wall.png);
-  background-repeat:no-repeat;
-  background-size:cover;
   background-position:50% 0%;
 }
-.section3-img{
+#section3-img{
   min-height:600px;
-  position:absolute;
-  bottom:80px;
-  width:100%;
   background-image:url(images/testimonials-section-image.png);
-  background-repeat:no-repeat;
-  background-size:cover;
   background-position:50% 0%;
 }
 
@@ -463,13 +457,10 @@ h1{
   margin-bottom:40px;
 }
 
-.section5-img{
+#section5-img{
   min-height:340px;
   background-image:url(images/contact-background.png);
-  width:100%;
-  position:absolute;
-  bottom:80px;
-  background-repeat:no-repeat;
+  background-size:contain;
 }
 .contact-info{
   padding-top:20px;
@@ -601,6 +592,9 @@ article.single-col{
   max-width:650px;
   margin-left:auto;
   margin-right:auto;
+  padding:15px;
+  background-color:rgba(255,255,255,.8);
+  border-radius:6px;
 }
 article.single-col ul{
   column-count:2;
@@ -619,41 +613,32 @@ article.single-col h2,
 #capabilities-img{
   min-height:500px;
   background-image:url(images/frogman.png);
-  background-repeat:no-repeat;
   background-position:43% 0%;
-  background-size:cover;
 }
 #business-analytics-img{
   min-height:400px;
   background-image:url(images/business-analytics-background.jpg);
-  background-repeat:no-repeat;
-  background-size:cover;
   background-position:center top;
 }
 #logistics-img{
-  min-height:450px;
-  background-image:url(images/logistics-background.png);
-  background-repeat:no-repeat;
+  min-height:400px;
+  background-image:url(images/military-vehicles.jpg);
   background-position:right bottom;
 }
 #engineering-img{
   min-height:400px;
   background-image:url(images/engineering-background.jpg);
-  background-repeat:no-repeat;
-  background-size:cover;
   background-position:53% 0%;
 }
 #education-img{
   min-height:400px;
   background-image:url(images/education-background.jpg);
-  background-repeat:no-repeat;
-  background-size:cover;
   background-position:center top;
 }
-#researchDevelopment{
+#research-img{
   background-image:url(images/research-background2.png);
-  background-repeat:no-repeat;
   background-position:50% 0%;
+  min-height:500px;
 }
 #contact-img{
   min-height:340px;
@@ -894,10 +879,7 @@ article.single-col h2,
   }
 }
 @media (max-width:767px){
-  .section1-img,
-  .section2-img,
-  .section3-img,
-  .section5-img{
+  .bottom-bg{
     position:relative;
     bottom:0;
   }
@@ -935,24 +917,14 @@ article.single-col h2,
     float:none;
     display:inline-block;
   }
-  #logistics{
-    background-image:url(images/logistics-background.png);
-    background-repeat:no-repeat;
-    background-position:right bottom;
-  }
   .logistic-content{
     background-color:rgba(255,255,255,.8);
     padding:20px;
   }
-  #cyber{
+  #cyber-img{
     background-image:url(images/cyber-background2.png);
-    background-repeat:no-repeat;
     background-position:28% 100%;
-  }
-  #cyber .single-col,
-  #researchDevelopment .single-col{
-    background-color:rgba(255,255,255,.8);
-    padding:15px;
+    min-height:540px;
   }
   .container-sm-height{
     display:table;
@@ -978,6 +950,9 @@ article.single-col h2,
     margin-left:auto;
     margin-right:auto;
   }
+  #section4{
+    margin-top:-40px;
+  }
 }
 @media (min-width:768px) and (max-width:991px){
   nav{
@@ -989,14 +964,14 @@ article.single-col h2,
   .section{
     margin-bottom:90px;
   }
-  .section1-img,
-  .section2-img,
-  .teaming-vehicles,
-  .section3-img,
-  .section5-img{
+  .bottom-bg{
     bottom:130px;
   }
-  .section1-img{
+  .teaming-vehicles{
+    bottom:130px;
+  }
+  .section1-img,
+  #capabilities-img{
     min-height:40%;
     bottom:0;
   }
@@ -1022,10 +997,10 @@ article.single-col h2,
   }
 }
 @media (min-width:1200px){
-  #cyber{
+  #cyber-img{
     background-position:left bottom;
   }
-  #researchDevelopment{
+  #research-img{
     background-position:right top;
   }
 }
