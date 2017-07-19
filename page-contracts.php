@@ -26,7 +26,7 @@
           <a href="http://www.gsaadvantage.gov">www.gsaadvantage.gov</a>
           <p><?php the_field('gsa_schedules_text'); ?></p>
           <a href="<?php the_field('gsa_schedules_price_list'); ?>" class="btn-main">GSA Contract Price List</a>
-          <h2><a href="#seaporteSupportServices" class="scroller" style="color:#822222;">Seaport Enhanced (Seaport-E)</a></h2>
+          <h2><a href="#teammates" class="scroller" style="color:#822222;">Seaport Enhanced (Seaport-E)</a></h2>
           <a href="http://www.seaport.navy.mil">www.seaport.navy.mil</a>
           <p><?php the_field('seaport_e_text'); ?></p>
           <h2>For Customer Satisfaction &amp; Contract Info</h2>
