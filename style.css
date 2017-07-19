@@ -610,11 +610,6 @@ article.single-col h2,
   font-size:24px;
 }
 
-#capabilities-img{
-  min-height:500px;
-  background-image:url(images/frogman.png);
-  background-position:43% 0%;
-}
 #business-analytics-img{
   min-height:400px;
   background-image:url(images/business-analytics-background.jpg);
@@ -952,6 +947,10 @@ article.single-col h2,
   }
   #section4{
     margin-top:-40px;
+  }
+  #section4.contact-page-loop,
+  #section4.blog-page-loop{
+    margin-top:0;
   }
 }
 @media (min-width:768px) and (max-width:991px){

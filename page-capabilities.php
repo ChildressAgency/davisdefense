@@ -1,7 +1,7 @@
 <?php get_header(); ?>
-<main id="main">
-  <section id="capabilities">
-    <div class="caps-icons keep-on-top">
+<main id="cap-main">
+  <section id="capabilities" class="section fp-auto-height-responsive">
+    <div class="caps-icons keep-on-top" style="margin-top:40px;">
       <div class="container">
         <h1>Capabilities</h1>
         <div class="row">
@@ -51,73 +51,134 @@
         </div>
       </div>
     </div>
-    <div id="capabilities-img"></div>        
+    <div id="capabilities-img" class="bottom-bg"></div>        
   </section>
-  <section id="businessAnalytics">
+  <section id="businessAnalytics" class="section fp-auto-height-responsive">
     <div class="container">
       <h1>Business Analytics</h1>
       <article class="single-col">
         <?php the_field('business_analytics_section_content'); ?>
       </article>
     </div>
-    <div id="business-analytics-img"></div>
+    <div id="business-analytics-img" class="bottom-bg"></div>
   </section>
-  <section id="logistics">
+  <section id="logistics" class="section fp-auto-height-responsive">
     <div class="container">
       <h1>Logistics</h1>
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="logistic-content">
-            <?php the_field('logistics_life_cycle_support_content'); ?>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="logistic-content">
-            <?php the_field('quality_assurance_support_content'); ?>
-          </div>
-        </div>
-        <div class="clearfix"></div>
-        <div class="col-sm-6">
-          <div class="logistic-content">
-            <?php the_field('equipment_sustainment_training_content'); ?>
-          </div>
-        </div>
-      </div>
+      <article class="single-col">
+        <?php the_field('logistics_section_content'); ?>
+      </article>
     </div>
-    <div id="logistics-img visible-xs-block"></div>
+    <div id="logistics-img" class="bottom-bg"></div>
   </section>
-  <section id="engineering">
+  <section id="engineering" class="section fp-auto-height-responsive">
     <div class="container">
       <h1>Engineering</h1>
       <article class="single-col">
         <?php the_field('engineering_section_content'); ?>
       </article>
     </div>
-    <div id="engineering-img"></div>
+    <div id="engineering-img" class="bottom-bg"></div>
   </section>
-  <section id="cyber">
+  <section id="cyber" class="section fp-auto-height-responsive">
     <div class="container">
       <h1>Cyber</h1>
       <article class="single-col">
         <?php the_field('cyber_section_content'); ?>
       </article>
     </div>
+    <div id="cyber-img" class="bottom-bg"></div>
   </section>
-  <section id="education">
+  <section id="education" class="section fp-auto-height-responsive">
     <div class="container">
       <h1>Education</h1>
       <article class="single-col">
         <?php the_field('education_section_content'); ?>
       </article>
     </div>
-    <div id="education-img"></div>
+    <div id="education-img" class="bottom-bg"></div>
   </section>
-  <section id="researchDevelopment">
+  <section id="researchDevelopment" class="section fp-auto-height-responsive">
     <div class="container">
       <h1>Research And Development</h1>
       <article class="single-col">
         <?php the_field('research_development_section_content'); ?>
       </article>
+    </div>
+    <div id="research-img" class="bottom-bg"></div>
+  </section>
+  <section class="section fp-auto-height-responsive" id="section5">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-5">
+          <h1>Contact Us</h1>
+        </div>
+        <div class="col-sm-7">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="contact-info">
+                <h3>Address</h3>
+                <p><?php the_field('street_address1', 'option'); ?><br /><?php echo get_field('street_address2', 'option') ? get_field('street_address2', 'option') . ', ' : ''; ?><?php the_field('city_state_zip', 'option'); ?></p>
+                <h3>Phone</h3>
+                <p><?php the_field('phone', 'option'); ?></p>
+                <h3>Fax</h3>
+                <p><?php the_field('fax', 'option'); ?></p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <?php echo do_shortcode('[contact-form-7 id="5" title="Contact form 1"]'); ?>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="section5-img" class="bottom-bg"></div>
+  </section>
+  <section class="section fp-auto-height" id="section6">
+    <div class="footer">
+      <div class="login-section">
+        <div class="container">
+          <?php if(is_user_logged_in()): ?>
+            <div class="btn-inline">
+              <a href="<?php echo home_url('employee-links'); ?>" class="btn-main">Employee Page</a>
+              <a href="<?php echo wp_logout_url(home_url()); ?>" class="btn-main">Logout</a>
+            </div>
+          <?php else: ?>
+            <?php get_template_part('custom-login-form'); ?>
+          <?php endif; ?>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <div class="container">
+          <a href="<?php echo home_url(); ?>" class="footer-logo pull-left">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/davis-logo-small.png" alt="Davis Defense Logo Small" />
+          </a>
+          <div class="footer-social pull-right">
+            <?php 
+              $facebook = get_field('facebook', 'option');
+              $twitter = get_field('twitter', 'option');
+              $linkedin = get_field('linkedin', 'option');
+              if($facebook): ?>
+                <a href="<?php echo $facebook; ?>" target="_blank"><i class="fa fa-facebook-official"></i></a>
+            <?php endif; 
+            if($twitter): ?>
+              <a href="<?php echo $twitter; ?>" target="_blank"><i class="fa fa-twitter"></i></a>
+            <?php endif;
+            if ($linkedin): ?>
+              <a href="<?php echo $linkedin; ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <?php endif; ?>
+          </div>
+        </div>
+        <ul class="list-unstyled list-inline">
+          <li><a href="<?php echo home_url('capabilities'); ?>">Capabilities</a></li>
+          <li><a href="<?php echo home_url('about-us'); ?>">About Us</a></li>
+          <li><a href="<?php echo home_url('contracts'); ?>">Contracts</a></li>
+          <li><a href="<?php echo home_url('contact-us'); ?>">Contact Us</a></li>
+        </ul>
+        <div class="clearfix"></div>
+        <p class="copyright">&copy;<?php echo date('Y'); ?> Davis Defense Group</p>
+        <p class="copyright">website created by <a href="https://childressagency.com">The Childress Agency</a></p>
+      </div>
     </div>
   </section>
 </main>
