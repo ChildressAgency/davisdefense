@@ -24,7 +24,7 @@
                 <span class="services-icon"></span>
               </div>
               <div class="media-body">
-                <h3 class="media-heading">Services</h3>
+                <h3 class="media-heading"><?php the_field('services_icon_title'); ?></h3>
                 <p><?php the_field('services_icon_text'); ?></p>
               </div>
             </a>
@@ -35,7 +35,7 @@
                 <span class="contracts-icon"></span>
               </div>
               <div class="media-body">
-                <h3 class="media-heading">Contracts</h3>
+                <h3 class="media-heading"><?php the_field('contracts_icon_title'); ?></h3>
                 <p><?php the_field('contracts_icon_text'); ?></p>
               </div>
             </a>
@@ -46,7 +46,7 @@
                 <span class="training-icon"></span>
               </div>
               <div class="media-body">
-                <h3 class="media-heading">Training</h3>
+                <h3 class="media-heading"><?php the_field('training_icon_title'); ?></h3>
                 <p><?php the_field('training_icon_text'); ?></p>
               </div>
             </a>
