@@ -1,16 +1,23 @@
 <?php get_header(); ?>
 <main id="main">
-  <div class="container">
-    <img src="<?php the_field('top_image'); ?>" class="img-responsive center-block" alt="Business people working at table" style="margin-top:40px;" />
-    <section class="main-content">
-      <h1>Company Overview</h1>
-      <article class="single-col">
-        <?php if(have_posts()): while(have_posts()): the_post(); ?>
-          <?php the_content(); ?>
-        <?php endwhile; endif; ?>
-      </article>
+  <?php if(have_rows('about_page_layout')): while(have_rows('about_page_layout')): the_row(); ?>
+    <section class="main-content<?php if(get_row_layout() == 'mountain_side_background'){ echo ' mountain'; } ?>">
+      <div class="container">
+        <?php if(get_row_layout() == 'hero_image'): ?>
+          <?php $top_image = get_sub_field('top_image'); ?>
+          <img src="<?php echo $top_image['url']; ?>" class="img-responsive center-block" alt="<?php echo $top_image['alt']; ?>" style="margin-top:40px;" />
+        <?php endif; ?>
+        <h1>Company Overview</h1>
+        <article class="single-col">
+          <?php if(have_posts()): while(have_posts()): the_post(); ?>
+            <?php the_content(); ?>
+          <?php endwhile; endif; ?>
+        </article>
+      </div>
     </section>
-    <section id="meetTheTeam">
+  <?php endwhile; endif; ?>
+  <section id="meetTheTeam">
+    <div class="container">
       <h1>Meet The Team</h1>
       <div class="row team-members">
         <?php if(have_rows('team_members')): $i=0; while(have_rows('team_members')): the_row(); ?>
@@ -49,7 +56,7 @@
           </div>
         <?php $i++; endwhile; endif; ?> 
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </main>
 <?php get_footer(); ?>
