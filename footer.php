@@ -1,4 +1,4 @@
-<?php if(!is_front_page() && !is_page('capabilities')): //front page footer is in front-page.php ?>
+<?php if(!is_front_page() && !is_page('capabilities') && !is_page('about-us')): //front page footer is in front-page.php ?>
   <?php if(!is_single() && !is_page('contact-us') && !is_page('employee-links') && !is_page('employee-login')): ?>
   <section id="contact">
     <div class="container">

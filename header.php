@@ -18,6 +18,14 @@
     <![endif]-->
   </head>
   <body <?php body_class(); ?>>
+  <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=1469539729752136";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <nav class="navbar-fixed">
       <?php if(is_user_logged_in()): ?>
         <a href="<?php echo wp_logout_url(home_url()); ?>" class="login-out pull-left hidden-xs">LOGOUT</a>

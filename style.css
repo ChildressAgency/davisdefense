@@ -879,7 +879,7 @@ article.single-col h2,
   background-image:url(images/cliff-side-road.png);
   background-repeat:no-repeat;
   min-height:840px;
-  background-position:left top;
+  background-position:left bottom;
 }
 .mountain+#meetTheTeam{
   margin-top:40px;
@@ -937,6 +937,7 @@ article.single-col h2,
   }
   .mountain{
     background-position:41% 0%;
+    background-size:cover;
   }
   #section4{
     background-image:none;

@@ -43,25 +43,8 @@
   <section id="section4" class="contact-page-loop">
     <div class="container">
       <h1>Stay Updated</h1>
-      <?php
-        $recent_posts = new WP_Query(array('posts_per_page' => 2, 'post_status' => 'publish'));
-        if($recent_posts->have_posts()): while($recent_posts->have_posts()): $recent_posts->the_post(); ?>
-          <div class="blog-post-summary">
-            <div class="media">
-              <div class="media-left">
-                <p><?php echo get_the_date('M d'); ?></p>
-              </div>
-              <div class="media-body">
-                <h4 class="media-header"><?php the_title(); ?><small>by <?php the_author(); ?></small></h4>
-                <?php the_excerpt(); ?>
-                <a href="<?php the_permalink(); ?>" class="read-more">READ MORE</a>
-              </div>
-            </div>
-          </div>
-      <?php endwhile; endif; wp_reset_postdata(); ?>
-      <div class="btn-inline">
-        <a href="<?php echo home_url('blog'); ?>" class="btn-main btn-clear">Our Blog</a>
-        <a href="<?php echo home_url('subscribe'); ?>" class="btn-main btn-clear">Subscribe</a>
+      <div class="blog-post-summary">
+        <div class="fb-page" data-href="https://www.facebook.com/davisdefensegroup" data-tabs="timeline" data-width="425" data-height="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/davisdefensegroup" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/davisdefensegroup">Davis Defense Group</a></blockquote></div>        
       </div>
     </div>
     <div class="follow-us">

@@ -61,7 +61,7 @@ function davisdefense_scripts(){
   
   wp_enqueue_script('bootstrap-script');
   wp_enqueue_script('fontawesome');
-  if(is_front_page() || is_page('capabilities')){
+  if(is_front_page() || is_page('capabilities') || is_page('about-us')){
     wp_enqueue_script('fullPage');
   }
 	wp_enqueue_script('google-maps');
@@ -76,7 +76,7 @@ function davisdefense_styles(){
   wp_register_style('davisdefense', get_template_directory_uri() . '/style.css');
   
   wp_enqueue_style('bootstrap-css');
-  if(is_front_page() || is_page('capabilities')){
+  if(is_front_page() || is_page('capabilities') || is_page('about-us')){
   	wp_enqueue_style('animate');
     wp_enqueue_style('fullPage-css');
   }
