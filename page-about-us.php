@@ -27,32 +27,13 @@
               $team_member_name = get_sub_field('team_member_name');
               $team_member_id = str_replace(' ', '', $team_member_name);
             ?>
-            <a href="#" class="team-member" data-toggle="modal" data-target="#<?php echo $team_member_id; ?>">
+            <a href="#" class="team-member" data-toggle="modal" data-target="#teamMemberBio" data-team_member_name="<?php echo $team_member_name; ?>" data-team_member_title="<?php echo the_sub_field('team_member_title'); ?>" data-team_member_bio="<?php echo the_sub_field('team_member_bio'); ?>">
               <img src="<?php the_sub_field('team_member_image'); ?>" class="img-responsive center-block" alt="<?php echo $team_member_name; ?>" />
               <h2><?php echo $team_member_name; ?><small><?php the_sub_field('team_member_title'); ?></small></h2>
             </a>
-            <div class="modal fade" id="<?php echo $team_member_id; ?>" tab-index="-1" role="dialog" aria-labelledby="<?php echo $team_member_id; ?>-title">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="<?php echo $team_member_id; ?>-title"><?php echo $team_member_name; ?><small><?php the_sub_field('team_member_title'); ?></small></h4>
-                  </div>
-                  <div class="modal-body">
-                    <blockquote>
-                      <footer><em><?php the_sub_field('team_member_quote'); ?></em></footer>
-                    </blockquote>
-                    <?php the_sub_field('team_member_bio'); ?>
-                  </div>
-                  <div class="modal-footer">
-                    <a href="<?php echo home_url('contact-us'); ?>" class="btn-main">Contact</a>
-                    <a href="#" class="btn-main close" data-dismiss="modal">Close</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <blockquote>
+              <footer><em><?php the_sub_field('team_member_quote'); ?></em></footer>
+            </blockquote>
           </div>
         <?php $i++; endwhile; endif; ?> 
       </div>
@@ -141,17 +122,6 @@
         responsiveHeight:600,
         slideSelector:'.fullpage-slide',
         verticalCentered:false,
-      });
-
-      $('.modal').on('click', function(){
-        //$.fn.fullpage.setAllowScrolling(false);
-        //$.fn.fullpage.setKeyboardScrolling(false);
-        $.fn.fullpage.destroy('all');
-      });
-      $('.close').on('click', function(){
-        //$.fn.fullpage.setAllowScrolling(true);
-        //$.fn.fullpage.setKeyboardScrolling(true);
-        $.fn.fullpage.reBuild();
       });
     }
   });

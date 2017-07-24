@@ -1,5 +1,5 @@
 <?php if(!is_front_page() && !is_page('capabilities') && !is_page('about-us')): //front page footer is in front-page.php ?>
-  <?php if(!is_single() && !is_page('contact-us') && !is_page('employee-links') && !is_page('employee-login')): ?>
+  <?php if(!is_single() && !is_page('contact-us') && !is_page('employee-links') && !is_page('employee-login') && !is_user_logged_in()): ?>
   <section id="contact">
     <div class="container">
       <div class="row">
@@ -76,6 +76,26 @@
     </div>
   </footer>
 <?php endif; ?>
+  <?php if(is_page('about-us')): ?>
+    <div class="modal fade" id="teamMemberBio" tab-index="-1" role="dialog" aria-labelledby="teamMember-title">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close hide-modal" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="teamMember-title"></h4>
+          </div>
+          <div class="modal-body">
+          </div>
+          <div class="modal-footer">
+            <a href="<?php echo home_url('contact-us'); ?>" class="btn-main">Contact</a>
+            <a href="#" class="btn-main hide-modal" data-dismiss="modal">Close</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <?php endif; ?>
     <?php wp_footer(); ?>
   </body>
 </html>

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main id="main">
+<main id="main"<?php if(is_user_logged_in()){ echo ' class="fix-height"'; } ?>>
   <div class="container">
     <article class="single-col">
       <?php if(have_posts()): while(have_posts()): the_post(); ?>

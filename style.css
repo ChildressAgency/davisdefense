@@ -648,7 +648,7 @@ article.single-col h2,
 }
 
 #meetTheTeam{
-  margin-top:100px;
+  /*margin-top:100px;*/
   margin-bottom:100px;
 }
 .team-members{
@@ -667,11 +667,11 @@ article.single-col h2,
   display:block;
   color:#123d61;
 }
-.team-members .modal-title{
+#teamMemberBio .modal-title{
   font-size:22px;
   text-transform:uppercase;
 }
-.team-members .modal-title>small{
+#teamMemberBio .modal-title>small{
   color:#123d61;
   display:block;
 }
@@ -881,8 +881,9 @@ article.single-col h2,
   min-height:840px;
   background-position:left bottom;
 }
-.mountain+#meetTheTeam{
-  margin-top:40px;
+
+.fix-height{
+  min-height:600px;
 }
 
 

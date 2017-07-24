@@ -19,7 +19,31 @@ jQuery(document).ready(function($){
   
   $('.acf-map').each(function(){
     map = new_map($(this));
-  });
+	});
+	
+	$('#teamMemberBio').on('show.bs.modal', function(e){
+		var teamMember = $(e.relatedTarget);
+		var teamMemberName = teamMember.data('team_member_name');
+		var teamMemberTitle = teamMember.data('team_member_title');
+		var teamMemberNameTitle = teamMemberName + '<small>' + teamMemberTitle + '</small>';
+		var teamMemberBio = teamMember.data('team_member_bio');
+
+		var modal = $(this);
+		modal.find('.modal-title').html(teamMemberNameTitle);
+		modal.find('.modal-body').html(teamMemberBio);
+	});
+	//disable scrolling on modal
+	$(document).on('click', '.team-member', function(){
+		$.fn.fullpage.setAllowScrolling(false);
+		$.fn.fullpage.setKeyboardScrolling(false);
+		//$.fn.fullpage.destroy();
+	});
+	$(document).on('click', '.hide-modal', function(){
+		$.fn.fullpage.setAllowScrolling(true);
+		$.fn.fullpage.setKeyboardScrolling(true);
+		$.fn.fullpage.reBuild();
+		//$.fn.fullpage.fitToSection();
+	});
 });
 
 /*
