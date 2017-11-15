@@ -16,13 +16,13 @@
       </div>
     </section>
   <?php endwhile; endif; ?>
-  <section class="section fp-auto-height-responsive" id="meetTheTeam">
+  <section class="section fp-auto-height-responsive" id="meetTheTeam" style="margin-top:100px;">
     <div class="container">
       <h1>Meet The Team</h1>
       <div class="row team-members">
         <?php if(have_rows('team_members')): $i=0; while(have_rows('team_members')): the_row(); ?>
-          <?php if($i%2==0){ echo '<div class="clearfix"></div>'; } ?>
-          <div class="col-sm-6">
+          <?php if(($i==2) || (($i%3==0) && ($i>3))){ echo '<div class="clearfix"></div>'; } ?>
+          <div class="<?php echo (($i==0) || ($i==1)) ? 'col-sm-6' : 'col-sm-4'; ?>">
             <?php 
               $team_member_name = get_sub_field('team_member_name');
               $team_member_id = str_replace(' ', '', $team_member_name);
@@ -31,15 +31,17 @@
               <img src="<?php the_sub_field('team_member_image'); ?>" class="img-responsive center-block" alt="<?php echo $team_member_name; ?>" />
               <h2><?php echo $team_member_name; ?><small><?php the_sub_field('team_member_title'); ?></small></h2>
             </a>
-            <blockquote>
-              <footer><em><?php the_sub_field('team_member_quote'); ?></em></footer>
-            </blockquote>
+            <?php if(get_sub_field('team_member_quote')): ?>
+              <blockquote>
+                <footer><em><?php the_sub_field('team_member_quote'); ?></em></footer>
+              </blockquote>
+            <?php endif; ?>
           </div>
         <?php $i++; endwhile; endif; ?> 
       </div>
     </div>
   </section>
-  <section class="section fp-auto-height-responsive" id="section5">
+           <section class="section fp-auto-height-responsive" id="section5">
     <div class="container">
       <div class="row">
         <div class="col-sm-5">
@@ -115,7 +117,7 @@
   </section>
 </main>
 <script>
-  jQuery(document).ready(function($){
+  /*jQuery(document).ready(function($){
     if(typeof $.fn.fullpage == 'function'){
       $('#about-main').fullpage({
         responsiveWidth:768,
@@ -124,6 +126,6 @@
         verticalCentered:false,
       });
     }
-  });
+  });*/
 </script>
 <?php get_footer(); ?>

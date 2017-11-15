@@ -5,7 +5,7 @@
   Version: 1.0
 */
 
-@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=e42c4583-625e-47c5-a530-f7059143fa80");
+@import url("//fast.fonts.net/t/1.css?apiType=css&projectid=e42c4583-625e-47c5-a530-f7059143fa80");
     @font-face{
         font-family:"Depot New W00_n4";
         src:url("Fonts/90317400-196a-457e-8327-0d38d3f9a74b.eot?#iefix") format("eot")
@@ -43,6 +43,9 @@ a{
 a:hover{
   color:#822222;
   text-decoration:underline;
+}
+a:focus{
+  outline:none;
 }
 
 img.aligncenter{
@@ -506,6 +509,9 @@ h1{
   background-color:#123d61;
 }
 
+#section5{
+  position:relative;
+}
 #section5.section{
   margin-bottom:0 !important;
 }
@@ -652,7 +658,7 @@ article.single-col h2,
   margin-bottom:100px;
 }
 .team-members{
-  max-width:450px;
+  max-width:550px;
   margin-left:auto;
   margin-right:auto;
 }
@@ -803,7 +809,8 @@ article.single-col h2,
   -webkit-transition:background-color .3s ease;
   transition:background-color .3s ease;
 }
-.btn-emp-link:hover{
+.btn-emp-link:hover,
+.btn-emp-link:focus{
   background-color:#123d61;
   color:#fff;
   text-decoration:none;
@@ -996,6 +1003,9 @@ article.single-col h2,
   #section4.contact-page-loop,
   #section4.blog-page-loop{
     margin-top:0;
+  }
+  #section5{
+    padding-bottom:360px;
   }
 }
 @media (min-width:768px) and (max-width:991px){
